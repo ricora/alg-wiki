@@ -1,0 +1,370 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Gitのつかいかた1 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="git2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="git1.html">
+            
+                <a href="git1.html">
+            
+                    
+                    Gitのつかいかた1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="git2.html">
+            
+                <a href="git2.html">
+            
+                    
+                    Gitのつかいかた2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="git3.html">
+            
+                <a href="git3.html">
+            
+                    
+                    Gitのつかいかた3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Gitのつかいかた1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="git--githubの使い方---手元での管理">Git / GitHubの使い方 - 手元での管理</h2>
+<p>これは筆者の裁量でバンバン中身を削っているものなので、<strong>しっかりとgitの基礎を身に着けたい人は<a href="https://git-scm.com/book/ja/v2" target="_blank">Git - Book</a>を参照してください。</strong>  </p>
+<p>また、このチュートリアルは、CLIを使って操作することを念頭に置き書かれています。
+コマンドラインツールが使えなかったり、まだ馴染んでいないと感じる人は<a href="https://www.sourcetreeapp.com/" target="_blank">SourceTree</a>などのソフトウェアを使いましょう。<br>プログラミング関連の様々なことに共通することですが、新しいツールを利用するときに苦手意識を持たないことが大切です。</p>
+<h3 id="gitってなんぞや？">Gitってなんぞや？</h3>
+<p>分散型バージョン管理ツールのことです。<br>なぜ分散させてバージョン管理したいかというと、たまに<strong>プログラムを書いているときに間違って消滅させたり、破壊的な変更を加えてしまう</strong>からです。
+人間は誰でも大抵ミスをするので、うまく管理していくのが大切です。課題も、成績も...</p>
+<p>実際にバージョン管理ツールが役に立つと想定される例：  </p>
+<blockquote>
+<p>AliceとBobは<strong>電脳たこやきについてのレポート</strong>を書いていましたが、Charlieが来て、<strong>電脳いかやき</strong>という文言をランダムに混入させてしまいました。
+  Charlieが去ったのち、バージョン管理ツールがあれば、レポートを書く対象である<strong>電脳いかやき</strong>を削除できますが、バージョン管理ツールがない場合は一つひとつ手作業で探す・プログラムで探索するなどの行為が必要になります。</p>
+</blockquote>
+<p>実際に様々なものが破壊されたり破滅したりするので、適当に置き換えて想像してみてください。例え悪意がなくとも徹夜明けでデータを吹き飛ばしたり、うっかりミスでデータを吹き飛ばしたり、<code>python</code>を消すことでOSが起動不可になるなどのケースがありえます。いまはわからなくとも、データを吹き飛ばしたり誤ってデータを消すなどの行為を通じて、分散の必要性、バージョン管理の必要性が分かってくると思います。</p>
+<hr>
+<h2 id="gitの使い方---ローカルリポジトリ">Gitの使い方 - ローカルリポジトリ</h2>
+<h3 id="手順">手順</h3>
+<p>いま、あるディレクトリ直下にいるとしましょう。
+ここでgitによるバージョン管理を始めるには、このコマンドを打ちます。</p>
+<pre><code>git init
+</code></pre><p>すると、このような出力が返ってくるはずです。</p>
+<pre><code>Initialized empty Git repository in (任意の文字列)
+</code></pre><p>しかし、このコマンドを打ったことで<code>git</code>がすべてのファイルを管理し始めるわけではありません。<br>私たちが<code>git</code>をこのディレクトリ内で使うと宣言した上で、どのファイルを管理するかを明示的に教えてあげる必要があるのです。  </p>
+<p><code>git</code>に管理してほしいファイルを指示するには、以下のコマンドを使います。</p>
+<pre><code>git add (ファイル名)
+</code></pre><p>しかし、このコマンドだけでは<code>git</code>によって記録される対象とはなりません。<br><code>git</code>は<strong>その時々のファイルの状態を管理するツール</strong>です。<br>それはつまり、いちいちファイルを足したり引いたり消したり……などの履歴を<strong>すべて</strong>記録するものではないということです。
+実際には、ファイル変更のきりが良さそうなところで<code>git</code>にバージョンの記録をお願いすることになります。</p>
+<p>バージョン記録のためのコマンドが以下のものです。</p>
+<pre><code>git commit -m (コミットログ)
+</code></pre><p>コミットログは、今回記録されるファイルでの変更点などを記すメッセージです。
+後の自分や今後他者の目に触れることを意識しつつ、意図がわかりやすいように簡潔に記しましょう。</p>
+<p>わざわざ<code>git</code>がこのような婉曲したアプローチを採るのはなぜでしょうか。
+それはブランチの概念に触れたときに明らかになります。</p>
+<hr>
+<h3 id="まとめ">まとめ</h3>
+<p>いままでの流れをまとめてみましょう。</p>
+<ol>
+<li>現在のディレクトリで<code>git</code>による管理をはじめます。<pre><code>git init
+</code></pre></li>
+<li>いくつかのファイルを<code>git</code>の管理対象にしましょう。<pre><code>git add (some files)
+</code></pre></li>
+<li>いまの状態を記録しましょう。必ずメッセージを書く必要があります。<pre><code>git commit -m (message)
+</code></pre>このような感じでバージョンを管理することができます。良かったですね。</li>
+</ol>
+<hr>
+<h3 id="ファイルの削除など">ファイルの削除など</h3>
+<p>では、以下に<code>git</code>管理からの削除方法とファイル一覧取得方法を記しておきます。</p>
+<ul>
+<li><code>add</code>だけしたファイルを管理から外したい場合<pre><code>git rm (ファイル名)
+</code></pre></li>
+<li>一度でも<code>commit</code>したことがあるファイルを管理から外したい場合<pre><code>git rm --cached (ファイル名)
+</code></pre></li>
+<li><code>git</code>で管理されているファイルの一覧を取得したい場合<pre><code>git ls-files
+</code></pre>これらは概略であり、もっとたくさんのオプションとたくさんの操作が存在します。  </li>
+</ul>
+<p>詳しくは</p>
+<pre><code>man git
+</code></pre><p>で調べてみてください。  </p>
+<p><code>man</code>コマンドはmanualの略で、様々なコマンドの使用例に深く立ち入って学ぶことができます。
+<code>git</code>コマンド以外でも<code>man (command)</code>で検索してみましょう。</p>
+<h3 id="最後に">最後に</h3>
+<p>ここまでの流れの詳細については、<a href="https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E5%9F%BA%E6%9C%AC" target="_blank">Gitの基本</a>を参照してください。
+中ほどの図において、それぞれ<code>git add</code>がステージング、<code>git commit</code>がコミットに対応します。</p>
+<p>つづきは<a href="git2.html">Git / GitHub の使い方 - リモートについて</a>。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="git2.html" class="navigation navigation-next " aria-label="Next page: Gitのつかいかた2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた1","level":"1.2","depth":1,"next":{"title":"Gitのつかいかた2","level":"1.3","depth":1,"path":"git2.md","ref":"git2.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git1.md","mtime":"2022-04-21T11:52:43.514Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-04-21T11:52:54.917Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
