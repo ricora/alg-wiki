@@ -20,10 +20,10 @@ jobs:
         uses: npm ci
 
       - name: Build
-        run: npx build
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./actions
+          publish_dir: ./public
