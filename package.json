@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx honkit build ./ ./docs",
-    "serve": "npx honkit serve ./ ./docs"
+    "build": "npx run build ./ ./docs",
+    "serve": "npx run serve ./ ./docs"
   },
   "keywords": [],
   "author": "",
