@@ -224,11 +224,11 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 <blockquote>
 <p>余談ですが、このサークルの<a href="https://github.com/RICORA" target="_blank">organization</a>にも入っておきましょう。
    Privateなリポジトリなどもあったり、サークルで取り組んでいるプロジェクトに参加できたりします。
-   もし入りたければ、部長のShinonomeくんとか、わしunagi_dogとか、アクティブなメンバーにtwitterないしdiscordで連絡してくれるとたぶん入れると思います。</p>
+   もし入りたければ、部長の<a href="https://twitter.com/Shinonome517" target="_blank">Shinonome</a>くんとか、わし<a href="https://twitter.com/NAUS3E" target="_blank">unagi_dog</a>とか、アクティブなメンバーにtwitterないしdiscordで連絡してくれるとたぶん入れると思います。</p>
 </blockquote>
 <h3 id="リモートリポジトリにプッシュしてみる">リモートリポジトリにプッシュしてみる</h3>
 <p><code>GitHub</code>側でリポジトリが生成できたので、ローカルリポジトリの状態をリモートに反映させましょう。</p>
-<p>まず、ローカルリポジトリ（<em>この語がわからなければ↑の節へ！</em>）にリモートリポジトリを登録しましょう。<br><code>GitHub</code>では左上の緑の<code>Clone</code>ボタンを押すとURLが表示されるので、</p>
+<p>まず、ローカルリポジトリ（<em>この語がわからなければ<a href="#git用語の定義">Git用語の定義</a>へ！</em>）にリモートリポジトリを登録しましょう。<br><code>GitHub</code>では左上の緑の<code>Clone</code>ボタンを押すとURLが表示されるので、</p>
 <pre><code class="lang-sh">git remote add origin (URL)
 </code></pre>
 <p>を入力します。  </p>
@@ -254,7 +254,7 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 <p>また、自分が行った変更を監視しましょう。一時的な変更を戻し忘れたり、ファイル削除が失敗したままだったりすることがままあります。その状態でたまたまレビューをすり抜けてしまうと、サイトが動いてはいてもh1のバカでかい文字で本文が書かれたりします。<code>git diff (branch) HEAD</code>などを使って確認していきましょう。</p>
 <hr>
 <h3 id="プルリクエスト">プルリクエスト</h3>
-<p>もちろん自分でチェックすることも大事ですが、複数人で行うようなプロジェクトの場合は他の人に差分のレビューをお願いしましょう。GitHubにはこのレビューを行うためのPull Request (以下プルリクエスト)という仕組みがあります。このブログでは、実際にサイトに反映するmainというブランチに他のブランチをマージする際に使われています。</p>
+<p>もちろん自分でチェックすることも大事ですが、複数人で行うようなプロジェクトの場合は他の人に差分のレビューをお願いしましょう。GitHubにはこのレビューを行うためのPull Request (以下プルリクエスト)という仕組みがあります。<a href="https://alg.tus-ricora.com/" target="_blank">RICORA Programming Teamのブログ</a>では、実際にサイトに反映するmainというブランチに他のブランチをマージする際に使われています。</p>
 <p>プルリクエストは以下の手順で行います。</p>
 <p>(プルリクエストを出すユーザー）</p>
 <ol>
@@ -345,7 +345,7 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた push, pull request","level":"2.3","depth":1,"previous":{"title":"Gitのつかいかた branch, merge","level":"2.2","depth":1,"path":"git-tutorial/git2.md","ref":"git-tutorial/git2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git-tutorial/git3.md","mtime":"2022-04-22T03:29:35.149Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-04-22T03:29:46.420Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた push, pull request","level":"2.3","depth":1,"previous":{"title":"Gitのつかいかた branch, merge","level":"2.2","depth":1,"path":"git-tutorial/git2.md","ref":"git-tutorial/git2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git-tutorial/git3.md","mtime":"2022-04-22T11:19:29.170Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-04-22T11:19:43.112Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
