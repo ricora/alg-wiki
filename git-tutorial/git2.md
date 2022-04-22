@@ -35,7 +35,7 @@ git switch -c (new branch name)
 
 です。(new branch name)には好きな名前を入れてください。
 
-> なんで同じことをするためのコマンドが複数あるかは、[LINK]()とかを読んでください。
+> なんで同じことをするためのコマンドが複数あるかは、[ここ](https://www.git-tower.com/learn/git/commands/git-switch#:~:text=The%20%22switch%22%20command,and%20creating%20branches!)とかを読んでください。
   また、ブランチは慣習により`切る`という表現をします。
 
 さて、これで新しいブランチに移ることができました。では、ブランチの一覧を見てそれを確認しましょう。
