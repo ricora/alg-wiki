@@ -202,7 +202,7 @@
 <hr>
 <h2 id="gitの使い方---リモートリポジトリとの通信・同期">Gitの使い方 - リモートリポジトリとの通信・同期</h2>
 <p>手元のパソコンでいくらバージョン管理をしても、パソコン自体が破壊されては元も子もないですよね。
-SSDの破損・パソコンの物理的損害などによる完全なるファイルの破壊を防ぐために、<code>git</code>を使うことで遠隔サーバーとファイルを同期させることができます。   </p>
+SSDの破損・パソコンの物理的損害などによる完全なるファイルの破壊を防ぐために、<code>git</code>を使うことで遠隔サーバーとファイルを同期させることができます。</p>
 <p>以下では、そのようなサーバーを提供するサービスの一つである<code>GitHub</code>を用いて説明をします。</p>
 <h3 id="githubでリモートリポジトリを作る">GitHubでリモートリポジトリを作る</h3>
 <ol>
@@ -215,27 +215,30 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 </ol>
 <p>これで終わりです！簡単でしたね。</p>
 <blockquote>
-<p> 余談ですが、このサークルの<a href="https://github.com/RICORA" target="_blank">organization</a>にも入っておきましょう。
+<p>余談ですが、このサークルの<a href="https://github.com/RICORA" target="_blank">organization</a>にも入っておきましょう。
    Privateなリポジトリなどもあったり、サークルで取り組んでいるプロジェクトに参加できたりします。
    もし入りたければ、部長のShinonomeくんとか、わしunagi_dogとか、アクティブなメンバーにtwitterないしdiscordで連絡してくれるとたぶん入れると思います。</p>
 </blockquote>
 <h3 id="リモートリポジトリにプッシュしてみる">リモートリポジトリにプッシュしてみる</h3>
 <p><code>GitHub</code>側でリポジトリが生成できたので、ローカルリポジトリの状態をリモートに反映させましょう。</p>
 <p>まず、ローカルリポジトリ（<em>この語がわからなければ↑の節へ！</em>）にリモートリポジトリを登録しましょう。<br><code>GitHub</code>では左上の緑の<code>Clone</code>ボタンを押すとURLが表示されるので、</p>
-<pre><code>git remote add origin (URL)
-</code></pre><p>を入力します。  </p>
+<pre><code class="lang-sh">git remote add origin (URL)
+</code></pre>
+<p>を入力します。  </p>
 <p>この段階でリモートリポジトリが登録できました。</p>
 <p>では、リモートリポジトリにローカルの状態を反映させます。<br>初回は以下のコマンドを使います。</p>
-<pre><code>git push --set-upstream origin master
-</code></pre><p>二回目以降は以下になります。</p>
-<pre><code>git push
-</code></pre><p>このコマンドを打ち終わったら、<code>GitHub</code>に戻って手元でコミットしたファイルが反映されていることと、リポジトリの右上にコミットの数が書いてあることを確認しましょう。</p>
+<pre><code class="lang-sh">git push --set-upstream origin master
+</code></pre>
+<p>二回目以降は以下になります。</p>
+<pre><code class="lang-sh">git push
+</code></pre>
+<p>このコマンドを打ち終わったら、<code>GitHub</code>に戻って手元でコミットしたファイルが反映されていることと、リポジトリの右上にコミットの数が書いてあることを確認しましょう。</p>
 <p>これで手元での管理とリモートとの同期は終わりです！お疲れ様でした！</p>
 <hr>
 <h2 id="開発手法とミスを防ぐ工夫">開発手法とミスを防ぐ工夫</h2>
 <p>でも、実際の開発で<code>master</code>ないし<code>main</code>にプッシュし続けていいのでしょうか。少し考えてみましょう。そのような開発の方法では、以下のようなリスクを背負い込むことになります。</p>
 <ul>
-<li>挙動がおかしくなるようなプログラムが混入する </li>
+<li>挙動がおかしくなるようなプログラムが混入する</li>
 <li>破壊的な変更が起きてしまう。プロジェクトが破壊される。</li>
 </ul>
 <p>これらを防ぐために、どのような手法を取ればよいのでしょうか。以下では、このサークルが採っている手法と個人的に重要だと思う手法を紹介します。</p>
@@ -249,10 +252,12 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 <p>(プルリクエストを出すユーザー）</p>
 <ol>
 <li><p>ローカルのブランチをリモートにプッシュする。初回は</p>
-<pre><code>git push (branch名) --set-upstream origin (branch名)
-</code></pre><p>二回目以降は</p>
-<pre><code>git push (branch名)
-</code></pre><p>です。</p>
+<pre><code class="lang-sh">git push (branch名) --set-upstream origin (branch名)
+</code></pre>
+<p>二回目以降は</p>
+<pre><code class="lang-sh">git push (branch名)
+</code></pre>
+<p>です。</p>
 </li>
 <li><p>GitHubにアクセスする、<code>gh</code>コマンドを使うなどでプルリクエストを出す<br>どういうプルリクエストなのかを書けばいいです。どのような変更を行ったかがわかるように書くとレビューしやすくていいと思います。  </p>
 </li>
@@ -333,7 +338,7 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた3","level":"1.4","depth":1,"previous":{"title":"Gitのつかいかた2","level":"1.3","depth":1,"path":"git2.md","ref":"git2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git3.md","mtime":"2022-04-21T11:52:43.514Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-04-21T11:52:54.917Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた3","level":"1.4","depth":1,"previous":{"title":"Gitのつかいかた2","level":"1.3","depth":1,"path":"git2.md","ref":"git2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git3.md","mtime":"2022-04-22T02:29:58.732Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-04-22T02:30:12.090Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
