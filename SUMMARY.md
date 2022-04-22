@@ -1,7 +1,10 @@
 # Summary
 
-* [Introduction](README.md)
-* [Gitのつかいかた1](git1.md)
-* [Gitのつかいかた2](git2.md)
-* [Gitのつかいかた3](git3.md)
+* [はじめに](README.md)
+
+### Gitのつかいかたシリーズ
+
+* [Gitのつかいかた init, add, commit](git1.md)
+* [Gitのつかいかた branch, merge](git2.md)
+* [Gitのつかいかた push, pull request](git3.md)
 
