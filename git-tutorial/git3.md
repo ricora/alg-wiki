@@ -43,7 +43,8 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 
 > 余談ですが、このサークルの[organization](https://github.com/RICORA)にも入っておきましょう。
    Privateなリポジトリなどもあったり、サークルで取り組んでいるプロジェクトに参加できたりします。
-   もし入りたければ、部長のShinonomeくんとか、わしunagi_dogとか、アクティブなメンバーにtwitterないしdiscordで連絡してくれるとたぶん入れると思います。
+   もし入りたければ、部長の[Shinonome](	
+https://twitter.com/Shinonome517)くんとか、わし[unagi_dog](https://twitter.com/NAUS3E)とか、アクティブなメンバーにtwitterないしdiscordで連絡してくれるとたぶん入れると思います。
 
 ### リモートリポジトリにプッシュしてみる
 
