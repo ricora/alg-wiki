@@ -11,6 +11,8 @@
 - [Git / GitHubのつかいかた](git-tutorial.html)
 
 書かれるであろうもの
+- [Markdownのつかいかた]()
+- [hugoのつかいかた / alg-HPにPRを出してみよう]()
 - [Marpのつかいかた]()
 - [Pandocのつかいかた]()
 - [Gnuplotのつかいかた]()
@@ -24,7 +26,7 @@
 
 インストールする際の手順:
 
-  0. npmとnodeとnpxを入れておく
+  0. npmとnodeとnpxを入れておく。わからなければ[node.jsの環境構築をする]()を参照してください。
   
   1. 以下のコマンドを打つ
   ```
@@ -37,4 +39,6 @@
     cd alg-wiki && npm run serve
   ```
 
-困ったときは[JS Primer](https://jsprimer.net/)がHonKitで書かれているのでそちらのGHとかを見るといいはず
+困ったときは[JS Primer](https://jsprimer.net/)がHonKitで書かれているのでそちらのGHとかを見るといいはず。
+
+なにか問題があればtwitter[@NAUS3E](https://twitter.com/NAUS3E)に連絡、またはissueを立ててください。
