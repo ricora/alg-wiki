@@ -9,7 +9,7 @@ Markdown は[マークアップ言語](https://ja.wikipedia.org/wiki/%E8%BB%BD%E
 最近の技術系プラットフォームでは Markdown 記法をサポートしているものが多い。（GitHub, Discord, Qiita など）そのため、Markdown はプログラミングを学ぶ上では知っておいて損はない。
 
 ### Markdownのメリット
-- HTMLなどと比べ、とても簡潔に書くことができる。
+- HTML などと比べ、とても簡潔に書くことができる。
 -  覚えやすい記述方式である。
 - 数式や表などを入力できる。
 
@@ -109,7 +109,7 @@ $\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0$
 #include <iostream>
 
 int main() {
-    std::cout << "Hello、 World!" << std::endl;
+    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
 ```
