@@ -99,7 +99,7 @@ $\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0$
 ```
 
 ## ソースコード
-``` ``` ```で挟む（記入例ではやむなく \ を入れているが，必要ない．）
+記入例ではやむなく \ を入れているが，必要ない．
 ```C++
 #include <iostream>
 
