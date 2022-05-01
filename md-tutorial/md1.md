@@ -9,7 +9,7 @@ Markdown は[マークアップ言語](https://ja.wikipedia.org/wiki/%E8%BB%BD%E
 最近の技術系プラットフォームでは Markdown 記法をサポートしているものが多い。（GitHub, Discord, Qiita など）そのため、Markdown はプログラミングを学ぶ上では知っておいて損はない。
 
 ### Markdownのメリット
-- HTML などと比べ、とても簡潔に書くことができる。
+- HTMLなどと比べ、とても簡潔に書くことができる。
 -  覚えやすい記述方式である。
 - 数式や表などを入力できる。
 
@@ -18,17 +18,23 @@ Markdown は[マークアップ言語](https://ja.wikipedia.org/wiki/%E8%BB%BD%E
 # Markdown の記述方法
 ## 見出し
 # h1
+
 ```
 # h1
 ```
+
 ## h2
+
 ```
 ## h2
+```
+
+### h3
+
 ```
 ### h3
 ```
-### h3
-```
+
 ## 段落
 空の行で間を開けるか、または半角スペースを 2 つ開ければ良い。
 
@@ -64,19 +70,23 @@ ___
 ## 箇条書き
 半角ハイフン ( - )  + スペース
 - RICORA
+
 ```
 - RICORA
 ```
+
 ## 引用
 半角大なり ( > ) を記述する。途中で ( > ) を増やすことにより 2 段引用が可能だ。
 > Markdown（マークダウン）は、文書を記述するための軽量マークアップ言語のひとつである。本来はプレーンテキスト形式で手軽に書いた文書からHTMLを生成するために開発されたものである。
 >  > Wikipediaより
+
 ```
 > Markdown（マークダウン）は、文書を記述するための軽量マークアップ言語のひとつである。本来はプレーンテキスト形式で手軽に書いた文書からHTMLを生成するために開発されたものである。
 >  > Wikipediaより
-
 ```
+
 ##  画像
+
 ```
 ![説明](URL)
 ```
@@ -86,9 +96,11 @@ ___
 ```
 
 ## 数式
+
 ```$$``` で囲った間に $\TeX$ 記述をすれば表示される。
 
 $\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0$
+
 ```
 $\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0$
 ```
@@ -97,6 +109,7 @@ $\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0$
 |普通|中央揃え|右揃え|
 | - | :-: | -: |
 |あ|い|う|
+
 ```
 |普通|中央揃え|右揃え|
 | - | :-: | -: |
@@ -104,7 +117,9 @@ $\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0$
 ```
 
 ## ソースコード
-記入例ではやむなく \ を入れているが、必要ない。
+
+\```で文字を囲うことによりコード記述になる。インテンドでも代用ができる。
+
 ```C++
 #include <iostream>
 
@@ -114,18 +129,32 @@ int main() {
 }
 ```
 
-```
-\```C++
-#include <iostream>
-int main() {
-    std::cout << "Hello、 World!" << std::endl;
-    return 0;
-}
-\```
-```
+    aaa
+    aaa
+
+
+また、埋め込むことも可能だ。
+
+例えば、`print('Hello, world!')`
+
+
+    ``` C++
+    #include <iostream>
+    int main() {
+      std::cout << "Hello、 World!" << std::endl;
+      return 0;
+    }
+    ```
+
+            aaa
+            aaa
+
+
+    `print('Hello, world!')`
 
 ## リンク
 [RICORA アルゴリズム班](https://alg.tus-ricora.com/)
+
 ```
 [RICORA アルゴリズム班](https://alg.tus-ricora.com/)
 ```
