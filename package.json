@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "honkit": "^3.7.1"
+  },
+  "dependencies": {
+    "honkit-plugin-katex": "^1.1.7"
   }
 }
