@@ -1,45 +1,54 @@
+# alg-wiki
+
 [![.github/workflows/gh-pages.yml](https://github.com/RICORA/alg-wiki/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/RICORA/alg-wiki/actions/workflows/gh-pages.yml)
 
 
-# はじめに
+## Overview
 
-このwikiは[RICORA言語班](https://alg.tus-ricora.com)での知見を集積するためのものです。
+このWikiは[RICORA Programming Team](https://alg.tus-ricora.com)での知見を集積するためのものです。
 
-## 内容
+## Contents
 
-いまあるもの
-- [Git / GitHubのつかいかた](git-tutorial.html)
-- [Markdownのつかいかた](md-tutorial/md1.html)
-- [VSCodeのつかいかた](vscode-tutorial/md1.html)
+### いまあるもの
 
-書かれるであろうもの
-- [hugoのつかいかた / alg-HPにPRを出してみよう]()
+- [Git / GitHubのつかいかた](git-tutorial/)
+- [Markdownのつかいかた](md-tutorial/)
+- [VS Codeのつかいかた](vscode-tutorial/)
+
+### 書かれるであろうもの
+
+- [Hugoのつかいかた / alg-HPにPRを出してみよう]()
 - [Marpのつかいかた]()
 - [Pandocのつかいかた]()
 - [Gnuplotのつかいかた]()
 
 
-### 環境構築する
 
-このページはHonkitを使っています。
 
-くわしくは[honkitのドキュメント](https://honkit.netlify.app/)を読んで編集してください。
+## Contribution
 
-インストールする際の手順:
+ページの生成には[Honkit](https://github.com/honkit/honkit)を使っています。詳しくは[Honkitのドキュメント](https://honkit.netlify.app/)を読んで編集してください。
 
-  0. npmとnodeとnpxを入れておく。わからなければ[node.jsの環境構築をする]()を参照してください。
-  
-  1. 以下のコマンドを打つ
-  ```
-    npm init --yes
-    npm install honkit --save-dev
-  ```
+なにか問題や疑問点があれば[Issues](https://github.com/RICORA/alg-wiki/issues)に投げてください。
 
-  2. ディレクトリに移動し、`npm run serve`を打って出てきたURLにアクセス
-  ```
-    cd alg-wiki && npm run serve
-  ```
+困ったときはHonkitが使われている他のドキュメントのリポジトリ(例えば[JavaScript Primer](https://jsprimer.net/)など)が参考になりそうです。
 
-困ったときは[JS Primer](https://jsprimer.net/)がHonKitで書かれているのでそちらのGHとかを見るといいはず。
+### Requirement
 
-なにか問題があればtwitter[@NAUS3E](https://twitter.com/NAUS3E)に連絡、またはissueを立ててください。
+[Node.js](https://nodejs.org/)が必要です。わからなければ[Node.jsの環境構築をする]()を参照してください。
+
+### Installation
+
+`README.md`や`package.json`などがあるディレクトリに移動し、以下のコマンドを実行してください。
+
+```
+npm install
+```
+
+### Preview
+
+以下のコマンドを実行すると[http://localhost:4000](http://localhost:4000)でプレビューができます。
+
+```
+npm run serve
+```
