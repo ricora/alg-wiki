@@ -1,6 +1,6 @@
 ## Git / GitHubの使い方 ブランチについて
 
-- 前 [Git / GitHub の使い方 - ローカル編](git1.html)
+- 前 [Git / GitHub の使い方 - ローカル編](./git1.html)
 
 ## Branchについて
 
@@ -83,7 +83,7 @@ git switch main or master
 
 ```sh
 git switch (new branch name) / git checkout (new branch name)
-git branch -l 
+git branch -l
 ```
 
 でしたね。
@@ -161,7 +161,7 @@ git add A.txt
 git commit -m "wrote to A.txt"
 ```
 
-と打ちます。  
+と打ちます。
 
 ここまで行った後で、二つのブランチ、mainとeditAでの`git log`の出力を比べてみましょう。
 
@@ -171,7 +171,7 @@ mainでは
 commit ... (HEAD -> main)
 ```
 
-editAでは 
+editAでは
 
 ```sh
 commit ...  (HEAD -> editA)
@@ -194,7 +194,7 @@ commit "initial commit"
           ^
           |
    ブランチ main <= HEAD
-``` 
+```
 
 となります。まだeditAはありません。そこで`git switch -c editA`を打ったとき、HEADはeditAの先頭のコミットを指すようになります。しかし、editAの先頭はmainのものと同一なので、実質的にHEADが指す位置は変わりません。
 
@@ -203,7 +203,7 @@ commit "initial commit"
           ^
           |
    ブランチ main, editA <= HEAD
-``` 
+```
 
 その次にコミットをするとどうなるでしょうか。上の例に従えば、editAの先頭のコミットは`git commit "wrote to A.txt"`を指すことになります。そこで、HEADもeditAの先頭を指すことになります。
 
@@ -217,7 +217,7 @@ commit "initial commit"
           ^
           |
    ブランチ main
-``` 
+```
 
 ここで`git switch main / master`をすると、HEADの位置はmaster / mainブランチの先頭のコミットへ移動します。
 
@@ -225,13 +225,13 @@ commit "initial commit"
                   -----> commit "wrote to A.txt"
                   |          ^
                   |          |
-                  |      ブランチ editA  
+                  |      ブランチ editA
                   |
 commit "initial commit"
           ^
           |
    ブランチ main <= HEAD
-``` 
+```
 
 ここで、例えば`touch b.txt`などを打って新規にファイルを作成し、それをコミットするとどうなるでしょうか。main / masterがeditAとは違う方向に1コミット分進むことになります。
 
@@ -239,15 +239,15 @@ commit "initial commit"
                   -----> commit "wrote to A.txt"
                   |          ^
                   |          |
-                  |      ブランチ editA  
+                  |      ブランチ editA
                   |
 commit "initial commit" --> commit "create B.txt"
                                      ^
                                      |
                             ブランチ main <= HEAD
-``` 
+```
 
-すると、コミットの履歴が分岐するのです。それはさておき、これでおわかりでしょうか。HEADが指し示す先が移動することによって、私たちは**見せかけの**ブランチ移動をしているのです。  
+すると、コミットの履歴が分岐するのです。それはさておき、これでおわかりでしょうか。HEADが指し示す先が移動することによって、私たちは**見せかけの**ブランチ移動をしているのです。
 また、ブランチがなぜブランチと呼ばれるかも解ると思います。ブランチという名は、本流から切り離されてその一つの枝になることから来ているということです。
 
 さて、ここからなぜブランチの切り替えでファイルがなくなるかを考えてみましょう。答えはシンプルで、HEADが移動することによって、ファイルがない状態のコミットが最近のコミットになるからです。
@@ -259,11 +259,11 @@ commit "initial commit" --> commit "create B.txt"
 ブランチの使いどころとしては、
 
 - 新規機能開発・機能追加
-- バグ修正などのパッチ当て作業  
+- バグ修正などのパッチ当て作業
 
 などが挙げられます。いずれもどこかのタイミングで開発の本流、例えばmainやmasterブランチにそのコミットを反映させる必要があるものです。
 
-そこで、ブランチにはマージという機能があります。mergeというのは混ぜる、という意味の英単語です。その名の通り、二つのブランチを合流させるためのものです。  
+そこで、ブランチにはマージという機能があります。mergeというのは混ぜる、という意味の英単語です。その名の通り、二つのブランチを合流させるためのものです。
 
 コマンドは簡単です。
 
@@ -275,16 +275,16 @@ git merge (マージしたいブランチ名)
 
 しかし、マージが可能である場面とそうでない場面があります。その中で、よくある状況を少し考えてみましょう。
 
-A. Fast-Forwardが可能であるような状態  
+A. Fast-Forwardが可能であるような状態
 
    マージするブランチがもう一つのブランチのHEADの先にコミットしている場合、マージするには他のブランチのコミットを単純に引っ張ってくればいいので簡単にマージできます。
 
-B. 直接マージできない状態  
+B. 直接マージできない状態
 
-   マージするブランチともう一つのブランチのコミットログに差があり、単純にコミットログを融合できないようなことも考えられます。  
-   そのような場合は、git側でエラーを吐くこともあります。エラーログを読むと共に、コミットログを確認してブランチがスパゲッティ状態にならないようにしましょう。  
+   マージするブランチともう一つのブランチのコミットログに差があり、単純にコミットログを融合できないようなことも考えられます。
+   そのような場合は、git側でエラーを吐くこともあります。エラーログを読むと共に、コミットログを確認してブランチがスパゲッティ状態にならないようにしましょう。
 
-　　詳しくは`man git-merge`もしくは`man 1 git-merge`とか[Branching and Merging - Git SCM Book](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)を読んでください。  
+　　詳しくは`man git-merge`もしくは`man 1 git-merge`とか[Branching and Merging - Git SCM Book](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)を読んでください。
 
 ただし、基本的にマージをするタイミングは多くないと思います。その際に調べていくような感じでいいと思います。
 
