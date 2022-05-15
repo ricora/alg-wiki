@@ -1,6 +1,6 @@
-# vscodeとは
+# VSCodeとは
 
-vscodeとは、Microsoftが開発する高機能テキストエディタ「Visual Studio Code」の略称である。  
+VSCodeとは、Microsoftが開発する高機能テキストエディタ「Visual Studio Code」の略称である。  
 テキストエディタでありながら、拡張機能の導入によってIDE同等レベルの機能性を得られる。  
 ソースコードはGitHubで公開されており、electron製であるためwindows・macOS・Linuxなど様々なOSで動作する。
 
@@ -13,7 +13,7 @@ vscodeとは、Microsoftが開発する高機能テキストエディタ「Visua
 | IDE              | 最初から必要なものは全部入ってる。それ故ちょっと重いが、環境構築は楽。                               |
 
 
-# vscodeの導入方法
+# VSCodeの導入方法
 
 ## windows
 
@@ -23,7 +23,7 @@ vscodeとは、Microsoftが開発する高機能テキストエディタ「Visua
 
 ## mac
 
-macでもwindowsと同様、インストーラーを用いてもvscodeをインストールできる。  
+macでもwindowsと同様、インストーラーを用いてもVSCodeをインストールできる。  
 ただし、homebrewというパッケージマネージャを利用したほうが後々便利であるため、今回はbrewを用いたインストール方法を解説する。  
 また、詳しいhomebrewの使い方については解説しないため、興味があったら各自調べてもらいたい。
 
@@ -36,7 +36,7 @@ macでもwindowsと同様、インストーラーを用いてもvscodeをイン�
 4. インストールが進み、`[Installation Success]`と表示されたらインストール成功。
   
 
-### 2. vscodeを導入する
+### 2. VSCodeを導入する
 
 ターミナル上で、
 ```bash
@@ -47,15 +47,15 @@ brew install --cask visual-studio-code
 > 参考文献: [VSCodeのインストール方法をまとめてみた(MacOS)](https://qiita.com/DaikiSuyama/items/f51a407584084c04b5cd)  
   
 
-# vscodeの使い方
+# VSCodeの使い方
 
-以下の内容は、[公式ドキュメント](https://code.visualstudio.com/docs/getstarted/userinterface)の内容をもとに作られています。  
-また、初歩的な使い方は[こちらのサイト](https://www.javadrive.jp/vscode/)が体系的にまとまっていて分かりやすいのでオススメです。
+以下の内容は、[公式ドキュメント](https://code.visualstudio.com/docs/getstarted/userinterface)の内容をもとに作られている。  
+また、初歩的な使い方は[こちらのサイト](https://www.javadrive.jp/vscode/)が体系的にまとまっていて分かりやすいのでオススメ。
 
 
-## vscodeの画面構成
+## VSCodeの画面構成
 
-vscodeの画面は、以下の画面レイアウトから成り立っている。  
+VSCodeの画面は、以下の画面レイアウトから成り立っている。  
 
 - A. Activity Bar  
   画面左端にあり、エクスプローラ画面や拡張機能画面などにサイドバーのビューを切り替えるのに使う。
@@ -125,14 +125,14 @@ vscodeの画面は、以下の画面レイアウトから成り立っている�
 以上の内容を書き込んだら、`ctrl+s`で保存をする。  
 `ctrl+k v`でプレビューをしてみて、正常に見れたら成功。
 
-# vscodeをカスタムする
+# VSCodeをカスタムする
 
 ## keymapについて
 
-vscodeでは、キーマップの設定を自由に変更できる。  
-また、標準で設定されているキーマップについては、**`Ctrl+K Ctrl+R`でPDF形式のチートシート[^1]が表示される**。  
+VSCodeでは、キーマップの設定を自由に変更できる。  
+また、標準で設定されているキーマップについては、**`Ctrl+K Ctrl+R`でPDF形式のチートシートが表示される**。  
 最初のうちはどこかにプリントアウトしてお手元においておくと良いかも。  
-[^1]: [チートシートの日本語訳\[qiita\]](https://qiita.com/TakahiRoyte/items/cdab6fca64da386a690b)
+> [チートシートの日本語訳\[qiita\]](https://qiita.com/TakahiRoyte/items/cdab6fca64da386a690b)
 
 
 ### キーマップの設定方法
@@ -165,13 +165,13 @@ vscodeでは、キーマップの設定を自由に変更できる。
 ### SSH
 
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
-  - VScodeからSSH接続が出来るようになる。
+  - VSCodeからSSH接続が出来るようになる。
   - SSHのときだけvimを使っているというそこのあなた、是非使ってみましょう。
 
 ### Markdown
 
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-  - VScodeをMarkdownエディタに変身させるソフト。
+  - VSCodeをMarkdownエディタに変身させるソフト。
   - `Ctrl+Shift+V`よりmdのプレビューが出来る。
   - 詳しい使い方は[こちらの記事](https://zenn.dev/ctrlkeykoyubi/articles/vscode-markdown-all-in-one)を参照。
 
@@ -190,7 +190,7 @@ vscodeでは、キーマップの設定を自由に変更できる。
 
 ## themeについて
 
-vscodeのthemeは、拡張機能と同様にインストール出来る。  
+VSCodeのthemeは、拡張機能と同様にインストール出来る。  
 
 
 ### themeの入れ方
@@ -199,14 +199,14 @@ vscodeのthemeは、拡張機能と同様にインストール出来る。
 1. [vscodethemes.com](https://vscodethemes.com/)を開く。
 2. 入れたいthemeを探し、クリック。
 3. OPEN WITH `VSCODE` をクリック。
-4. vscode上で開かれた画面上部にあるインストールをクリック。
+4. VSCode上で開かれた画面上部にあるインストールをクリック。
 5. どのthemeを適用するか聞かれるので、好きなものを選ぶ。
 
 
 ### おすすめのtheme一覧
 
 - [GithHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)  
-  誰もが知るGitHubで使われているテーマのvscode版。  
+  誰もが知るGitHubで使われているテーマのVSCode版。  
   構文ハイライトに使われる色の種類は少なめで、直感的にコードを読める。筆者もよく使っている。  
   ![GitHub Theme](https://vscodethemes.com/e/github.github-vscode-theme/github-dark.svg?language=javascript)
 
@@ -216,13 +216,13 @@ vscodeのthemeは、拡張機能と同様にインストール出来る。
   ![Material Theme](https://vscodethemes.com/e/equinusocio.vsc-community-material-theme/community-material-theme-darker-high-contrast.svg?language=javascript)
 
 - [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode&ssr=false#overview)  
-  かの有名なsublimetextのmonokaiをvscodeに移植したもの。  
+  かの有名なsublimetextのmonokaiをVSCodeに移植したもの。  
   monokaiの作者本人が作っているらしく、非常にクオリティが高い。  
   注意点としては、有料ライセンス(¥1000位)を買わないとたまに購入促進の広告が出るらしい(筆者は使ってないので詳しくは不明)。
   ![Monokai](https://vscodethemes.com/e/monokai.theme-monokai-pro-vscode/monokai-pro.svg?language=javascript)
 
 - [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)  
-  Atom標準のダークテーマのvscode移植版。  
+  Atom標準のダークテーマのVSCode移植版。  
   構文ハイライトに使われる色の種類が多く、慣れれば見やすい。個人的にはjavascriptとの親和性が高いように感じる。  
   ![One Dark Pro](https://vscodethemes.com/e/zhuangtongfa.material-theme/one-dark-pro.svg?language=javascript)
 
@@ -322,7 +322,7 @@ Ex. `Cummunity Material Theme Darker High Contrast`での`focusBorder`の色を�
 
 # 参考文献
 
-## vscodeについて
+## VSCodeについて
 
 - 日経XTECH、「これさえあれば大丈夫、ソフト開発の大定番「VSCode」を極める」
   https://xtech.nikkei.com/atcl/nxt/column/18/01907/010500001/
@@ -330,7 +330,7 @@ Ex. `Cummunity Material Theme Darker High Contrast`での`focusBorder`の色を�
   https://azure.microsoft.com/ja-jp/products/visual-studio-code/
 
 
-## vscodeのインストール方法
+## VSCodeのインストール方法
 
 - Let'sプログラミング、「Visual Studio Code」のダウンロードとインストール  
   https://www.javadrive.jp/vscode/install/index1.html
@@ -340,7 +340,7 @@ Ex. `Cummunity Material Theme Darker High Contrast`での`focusBorder`の色を�
   https://qiita.com/DaikiSuyama/items/f51a407584084c04b5cd
 
 
-## vscodeの使いかた
+## VSCodeの使いかた
 
 - Microsoft、「Visual Studio Code User Interface」
   https://code.visualstudio.com/docs/getstarted/userinterface
@@ -348,7 +348,7 @@ Ex. `Cummunity Material Theme Darker High Contrast`での`focusBorder`の色を�
   https://www.javadrive.jp/vscode/
 
 
-## vscodeをカスタムする
+## VSCodeをカスタムする
 - Qiita、「【Windows版】VS Code キーボードショートカット一覧 （オススメ付き）」
   https://qiita.com/TakahiRoyte/items/cdab6fca64da386a690b
 - ITメディア、「VS Codeで配色テーマをカスタマイズするには」  
