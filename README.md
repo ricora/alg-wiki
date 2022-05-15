@@ -9,9 +9,10 @@
 
 いまあるもの
 - [Git / GitHubのつかいかた](git-tutorial.html)
+- [Markdownのつかいかた](md-tutorial/md1.html)
+- [VSCodeのつかいかた](vscode-tutorial/md1.html)
 
 書かれるであろうもの
-- [Markdownのつかいかた](md-tutorial/md1.md)
 - [hugoのつかいかた / alg-HPにPRを出してみよう]()
 - [Marpのつかいかた]()
 - [Pandocのつかいかた]()
