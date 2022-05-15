@@ -1,0 +1,650 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>VSCodeのつかいかた · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../md-tutorial/md1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Gitのつかいかたシリーズ</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../git-tutorial.html">
+            
+                <a href="../git-tutorial.html">
+            
+                    
+                    Gitのつかいかた
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../git-tutorial/git1.html">
+            
+                <a href="../git-tutorial/git1.html">
+            
+                    
+                    Gitのつかいかた init, add, commit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../git-tutorial/git2.html">
+            
+                <a href="../git-tutorial/git2.html">
+            
+                    
+                    Gitのつかいかた branch, merge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../git-tutorial/git3.html">
+            
+                <a href="../git-tutorial/git3.html">
+            
+                    
+                    Gitのつかいかた push, pull request
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ツールの使い方とか</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../md-tutorial/md1.html">
+            
+                <a href="../md-tutorial/md1.html">
+            
+                    
+                    Markdownのつかいかた
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="md1.html">
+            
+                <a href="md1.html">
+            
+                    
+                    VSCodeのつかいかた
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >VSCodeのつかいかた</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="vscodeとは">VSCodeとは</h1>
+<p>VSCodeとは、Microsoftが開発する高機能テキストエディタ「Visual Studio Code」の略称である。<br>テキストエディタでありながら、拡張機能の導入によってIDE同等レベルの機能性を得られる。<br>ソースコードはGitHubで公開されており、electron製であるためwindows・macOS・Linuxなど様々なOSで動作する。</p>
+<h2 id="テキストエディタとideの違い">テキストエディタとIDEの違い</h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>テキストエディタ</td>
+<td>コードを書く上で最小限の機能を持ったソフト。必要な機能については適宜追加していく。それ故動作が軽い。</td>
+</tr>
+<tr>
+<td>IDE</td>
+<td>最初から必要なものは全部入ってる。それ故ちょっと重いが、環境構築は楽。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="vscodeの導入方法">VSCodeの導入方法</h1>
+<h2 id="windows">windows</h2>
+<p>↓以下参照↓<br><a href="https://www.javadrive.jp/vscode/install/index1.html" target="_blank">Let&apos;sプログラミング、「Visual Studio Codeのダウンロードとインストール」</a></p>
+<h2 id="mac">mac</h2>
+<p>macでもwindowsと同様、インストーラーを用いてもVSCodeをインストールできる。<br>ただし、homebrewというパッケージマネージャを利用したほうが後々便利であるため、今回はbrewを用いたインストール方法を解説する。<br>また、詳しいhomebrewの使い方については解説しないため、興味があったら各自調べてもらいたい。</p>
+<h3 id="1-homebrewを導入する">1. homebrewを導入する</h3>
+<ol>
+<li>Homebrewの<a href="https://brew.sh/index_ja" target="_blank">公式HP</a>に行き、真ん中に表示されているコマンドをコピーする。</li>
+<li><code>ターミナル.app</code>を起動する</li>
+<li><code>ターミナル</code>上で、①でコピーした内容を貼り付け、実行する。</li>
+<li>インストールが進み、<code>[Installation Success]</code>と表示されたらインストール成功。</li>
+</ol>
+<h3 id="2-vscodeを導入する">2. VSCodeを導入する</h3>
+<p>ターミナル上で、</p>
+<pre><code class="lang-bash">brew install --cask visual-studio-code
+</code></pre>
+<p>を実行する。</p>
+<blockquote>
+<p>参考文献: <a href="https://qiita.com/DaikiSuyama/items/f51a407584084c04b5cd" target="_blank">VSCodeのインストール方法をまとめてみた(MacOS)</a>  </p>
+</blockquote>
+<h1 id="vscodeの使い方">VSCodeの使い方</h1>
+<p>以下の内容は、<a href="https://code.visualstudio.com/docs/getstarted/userinterface" target="_blank">公式ドキュメント</a>の内容をもとに作られている。<br>また、初歩的な使い方は<a href="https://www.javadrive.jp/vscode/" target="_blank">こちらのサイト</a>が体系的にまとまっていて分かりやすいのでオススメ。</p>
+<h2 id="vscodeの画面構成">VSCodeの画面構成</h2>
+<p>VSCodeの画面は、以下の画面レイアウトから成り立っている。  </p>
+<ul>
+<li>A. Activity Bar<br>画面左端にあり、エクスプローラ画面や拡張機能画面などにサイドバーのビューを切り替えるのに使う。</li>
+<li>B. Side Bar<br>エクスプローラや拡張機能、デバッグ画面など様々なビューを表示する。エディターグループでの作業を支援する。  </li>
+<li>C. <strong>Editor Groups</strong><br>画面真ん中の、<strong>実際のコードを書いていく画面</strong>。基本的にこの画面で作業をしていく。</li>
+<li>D. Panel<br>エディタ下部の、ターミナルなどを表示しておける画面。<strong><code>ctrl-j</code>で表示、非表示を切り替えられる</strong>。便利。</li>
+<li>E. Status Bar<br>言語や文字コードなど、開いてるプロジェクトやファイルの情報を表示する。</li>
+</ul>
+<p><img src="https://code.visualstudio.com/assets/docs/getstarted/userinterface/hero.png" alt="User Interface"></p>
+<h2 id="markdownを書いてみる初心者向け">markdownを書いてみる(初心者向け)</h2>
+<h3 id="1ファイルを作成してみよう">1.ファイルを作成してみよう</h3>
+<ol>
+<li><code>Ctrl+N</code>より、ファイルを作成する。</li>
+<li><code>Ctrl+K M</code>で言語選択画面を開き、markdownを選択する。</li>
+<li><code>Ctrl+S</code>で、適当な場所に保存しておく。</li>
+</ol>
+<h3 id="2-ファイルを編集してみよう">2. ファイルを編集してみよう</h3>
+<p>詳しいmarkdownの文法については、各自調べてもらいたい。<br>一応、基礎的な文法は以下の通りである。</p>
+<pre><code class="lang-markdown"><span class="hljs-section"># 見出し1</span>
+<span class="hljs-section">## 見出し2</span>
+
+<span class="hljs-bullet">-</span> リスト1
+<span class="hljs-bullet">-</span> リスト2
+
+<span class="hljs-bullet">1.</span> 番号付きリスト1
+<span class="hljs-bullet">2.</span> 番号付きリスト2
+
+<span class="hljs-quote">&gt; 引用</span>
+
+<span class="hljs-strong">**強調文字**</span>
+
+<span class="hljs-section">区切り
+---</span>
+===
+
+<span class="hljs-code">`インラインコード`</span>
+</code></pre>
+<p>試しに、Hello worldのwikipediaの一部をmarkdownで書いてみる。</p>
+<pre><code class="lang-markdown"><span class="hljs-strong">**Hello world**</span>（ハロー・ワールド）は、画面に「Hello, world!」やそれに類する文字列を表示するプログラムの通称である。
+多くのプログラミング言語において非常に単純なプログラムであり、プログラミング言語の入門書で、プログラムを動かすためのプログラミング言語の基本文法の解説例として提示される。
+
+<span class="hljs-section">## 利用目的</span>
+ハロー・ワールドは伝統的にプログラミング言語をプログラム初心者に紹介するために使われる。
+また、ハロー・ワールドはプログラミング言語が正しくインストールされていること、およびプログラミング言語の使用方法を理解するための[<span class="hljs-string">健全性テスト</span>](<span class="hljs-link">https://ja.wikipedia.org/wiki/健全性テスト</span>)にも使用される。
+
+<span class="hljs-section">## 歴史</span>
+プログラミングできる[<span class="hljs-string">コンピュータ</span>](<span class="hljs-link">https://ja.wikipedia.org/wiki/コンピュータ</span>)の開発以来、小さなテストプログラムは存在してきたが、
+テスト文言として「Hello, World!」を使う習慣はブライアン・カーニハンとデニス・リッチーによる著書
+「[<span class="hljs-string">プログラミング言語C</span>](<span class="hljs-link">https://ja.wikipedia.org/wiki/プログラミング言語C</span>)」（1978年）のC言語バージョンから始まったと言われている。
+同著書のプログラム例は<span class="hljs-code">`hello, world`</span>（大文字なし、感嘆符なし）を標準出力に出力する。
+</code></pre>
+<p>以上の内容を書き込んだら、<code>ctrl+s</code>で保存をする。<br><code>ctrl+k v</code>でプレビューをしてみて、正常に見れたら成功。</p>
+<h1 id="vscodeをカスタムする">VSCodeをカスタムする</h1>
+<h2 id="keymapについて">keymapについて</h2>
+<p>VSCodeでは、キーマップの設定を自由に変更できる。<br>また、標準で設定されているキーマップについては、<strong><code>Ctrl+K Ctrl+R</code>でPDF形式のチートシートが表示される</strong>。<br>最初のうちはどこかにプリントアウトしてお手元においておくと良いかも。  </p>
+<blockquote>
+<p><a href="https://qiita.com/TakahiRoyte/items/cdab6fca64da386a690b" target="_blank">チートシートの日本語訳[qiita]</a></p>
+</blockquote>
+<h3 id="キーマップの設定方法">キーマップの設定方法</h3>
+<ol>
+<li><code>Ctrl+K Ctrl+S</code>でショートカットキーの設定画面を開く。<br>もしくは、<code>Ctrl+Shift+P</code>から<code>Open Keyboard Shortcuts</code>と検索しても良い  </li>
+<li>適当に変えたいキーバインドを検索して、<code>keybindig</code>の値を変更する。<br>(検索窓右側にあるキーボードアイコンを押すと、キー入力から検索できる)  </li>
+</ol>
+<h2 id="拡張機能について">拡張機能について</h2>
+<p>ジャンル別におすすめの拡張機能を紹介していく。</p>
+<h3 id="日本語化">日本語化</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja" target="_blank">Japanese Language Pack for Visual Studio Code</a><ul>
+<li>日本語化したい人は入れましょう。</li>
+</ul>
+</li>
+</ul>
+<h3 id="git関連">Git関連</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank">GitLens</a><ul>
+<li>機能が多すぎて説明しきれないため、<a href="https://atmarkit.itmedia.co.jp/ait/articles/2111/19/news034.html" target="_blank">こちら</a>を参照。</li>
+<li>絶対に入れましょう。</li>
+</ul>
+</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore" target="_blank">gitignore</a>  <ul>
+<li>gitignoreのsyntaxhighlightを追加</li>
+<li>選択した言語のgitignoreを自動生成する(コマンドパレットから、<code>Add gitignore</code>を選択)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="ssh">SSH</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank">Remote Development</a><ul>
+<li>VSCodeからSSH接続が出来るようになる。</li>
+<li>SSHのときだけvimを使っているというそこのあなた、是非使ってみましょう。</li>
+</ul>
+</li>
+</ul>
+<h3 id="markdown">Markdown</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one" target="_blank">Markdown All in One</a><ul>
+<li>VSCodeをMarkdownエディタに変身させるソフト。</li>
+<li><code>Ctrl+Shift+V</code>よりmdのプレビューが出来る。</li>
+<li>詳しい使い方は<a href="https://zenn.dev/ctrlkeykoyubi/articles/vscode-markdown-all-in-one" target="_blank">こちらの記事</a>を参照。</li>
+</ul>
+</li>
+</ul>
+<h3 id="その他">その他</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode" target="_blank">Tabnine</a><ul>
+<li>AIによる優秀なコード補完が提供される。</li>
+</ul>
+</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments" target="_blank">Better Comments</a><ul>
+<li>コメントアウトの後に<code>*</code>, <code>!</code>, <code>?</code>, <code>TODO:</code>などをつけることで、コメントアウトをカラフルに出来るようになる。
+<img src="https://github.com/aaron-bond/better-comments/raw/HEAD/images/better-comments.PNG" alt="better comments"></li>
+</ul>
+</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" target="_blank">indent rainbow</a><ul>
+<li>インデントをカラフルにする。</li>
+<li>pythonなどインデントが重要な言語では入れると良いかも？
+<img src="https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png" alt="indent rainbow"></li>
+</ul>
+</li>
+</ul>
+<h2 id="themeについて">themeについて</h2>
+<p>VSCodeのthemeは、拡張機能と同様にインストール出来る。  </p>
+<h3 id="themeの入れ方">themeの入れ方</h3>
+<p>今回は、<a href="https://vscodethemes.com/" target="_blank">vscodethemes.com</a>から好きなthemeを探し、インストールしてみる。  </p>
+<ol>
+<li><a href="https://vscodethemes.com/" target="_blank">vscodethemes.com</a>を開く。</li>
+<li>入れたいthemeを探し、クリック。</li>
+<li>OPEN WITH <code>VSCODE</code> をクリック。</li>
+<li>VSCode上で開かれた画面上部にあるインストールをクリック。</li>
+<li>どのthemeを適用するか聞かれるので、好きなものを選ぶ。</li>
+</ol>
+<h3 id="おすすめのtheme一覧">おすすめのtheme一覧</h3>
+<ul>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme" target="_blank">GithHub Theme</a><br>誰もが知るGitHubで使われているテーマのVSCode版。<br>構文ハイライトに使われる色の種類は少なめで、直感的にコードを読める。筆者もよく使っている。<br><img src="https://vscodethemes.com/e/github.github-vscode-theme/github-dark.svg?language=javascript" alt="GitHub Theme"></p>
+</li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme" target="_blank">Material Theme</a><br>非常に人気のあるtheme。アクセントカラーを簡単に変えられるのが売り。<br>個人的に一番オシャレだと思うテーマNo.1。
+<img src="https://vscodethemes.com/e/equinusocio.vsc-community-material-theme/community-material-theme-darker-high-contrast.svg?language=javascript" alt="Material Theme"></p>
+</li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode&amp;ssr=false#overview" target="_blank">Monokai Pro</a><br>かの有名なsublimetextのmonokaiをVSCodeに移植したもの。<br>monokaiの作者本人が作っているらしく、非常にクオリティが高い。<br>注意点としては、有料ライセンス(¥1000位)を買わないとたまに購入促進の広告が出るらしい(筆者は使ってないので詳しくは不明)。
+<img src="https://vscodethemes.com/e/monokai.theme-monokai-pro-vscode/monokai-pro.svg?language=javascript" alt="Monokai"></p>
+</li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme" target="_blank">One Dark Pro</a><br>Atom標準のダークテーマのVSCode移植版。<br>構文ハイライトに使われる色の種類が多く、慣れれば見やすい。個人的にはjavascriptとの親和性が高いように感じる。<br><img src="https://vscodethemes.com/e/zhuangtongfa.material-theme/one-dark-pro.svg?language=javascript" alt="One Dark Pro"></p>
+</li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula" target="_blank">Dracula Official</a><br>コントラストがかなり高めで、目が疲れる代わりに可読性がかなり高いテーマ。<br>Dracula Themeは様々なソフトウェアで開発されており、<a href="https://draculatheme.com/" target="_blank">公式HP</a>より対応一覧が出ている。
+<img src="https://vscodethemes.com/e/dracula-theme.theme-dracula/dracula.svg?language=javascript" alt="Dracula"></p>
+</li>
+</ul>
+<h3 id="細かいthemeのいじり方中・上級者向け。">細かいthemeのいじり方(中・上級者向け)。</h3>
+<p>基本的に設定はjsonファイルからのみ可能である。<br><code>&quot;workbench.colorCustomizations&quot;</code>と、<code>&quot;editor.tokenColorCustomization&quot;</code>に設定を上書きすることによって、カスタマイズをしていく。<br>また、細かい設定の値については、実際のThemeのソースコード(<a href="https://github.com/primer/github-vscode-theme" target="_blank">GitHub Theme</a>)や<a href="https://code.visualstudio.com/api/references/theme-color" target="_blank">公式ドキュメント</a>を参考にしてもらいたい。</p>
+<h4 id="themeをいじる">themeをいじる</h4>
+<p>具体的には、</p>
+<pre><code class="lang-jsonc">&quot;workbench.colorCustomizations&quot;: {
+  &quot;設定項目&quot;: &quot;値&quot;
+}
+</code></pre>
+<p>といった形で書いていく。  </p>
+<p>また、特定のthemeでのみ適応させたい場合は、</p>
+<pre><code class="lang-jsonc">&quot;workbench.colorCustomizations&quot;: {
+  &quot;[テーマ名]&quot;: {
+    &quot;設定項目&quot;: &quot;値&quot;
+  }
+},
+</code></pre>
+<p>Ex. <code>Cummunity Material Theme Darker High Contrast</code>での<code>focusBorder</code>の色を赤にする。</p>
+<pre><code class="lang-jsonc">&quot;workbench.colorCustomizations&quot;: {
+  &quot;[Community Material Theme Darker High Contrast]&quot;: {
+    &quot;focusBorder&quot;: &quot;#ff0000&quot;
+  }
+},
+</code></pre>
+<h4 id="syntax-highlightをいじる">syntax highlightをいじる</h4>
+<p>具体的には、</p>
+<pre><code class="lang-jsonc">&quot;editor.tokenColorCustomizations&quot;: {
+  &quot;comments&quot;: {
+    &quot;foreground&quot;: &quot;#008800&quot;,
+    &quot;fontStyle&quot;: &quot;underline&quot;
+  },
+  &quot;functions&quot;: {
+    &quot;foreground&quot;: &quot;#000088&quot;,
+    &quot;fontStyle&quot;: &quot;bold&quot;
+  },
+</code></pre>
+<p>といった形で書いていく。<br>また、ここで指定できるものは、以下にあるものだけである。  </p>
+<ul>
+<li>comments: コメントの色とスタイル</li>
+<li>functions: 関数やメソッドの色とスタイル</li>
+<li>keywords: キーワードの色とスタイル</li>
+<li>numbers: 数値リテラルの色とスタイル</li>
+<li>strings: 文字列リテラルの色とスタイル</li>
+<li>types: 型の色とスタイル</li>
+<li>variables: 変数の色とスタイル</li>
+<li>textMateRules: TextMateエディタで定められているルールにのっとった構文ハイライト指定（後述）  </li>
+</ul>
+<p>そして、commentsやfunctionなど大まかなジャンル指定では対応できないもの対しては、<code>textMateRules</code>を用いて指定していく。  </p>
+<h4 id="textmaterulesをいじる">textMateRulesをいじる</h4>
+<p>具体的には、以下のように書いていく。</p>
+<pre><code class="lang-jsonc">&quot;textMateRules&quot;: [
+  {
+    &quot;scope&quot;: [
+      &quot;comment&quot;,
+      &quot;comment.block&quot;,
+      &quot;comment.block.documentation&quot;,
+      &quot;keyword.control&quot;,
+      &quot;storage.type&quot;
+    ],    &quot;settings&quot;: {
+      &quot;fontStyle&quot;: &quot;&quot;
+    }
+  }
+],
+</code></pre>
+<ul>
+<li><code>&quot;scope&quot;</code>の値については、コマンドパレットより<code>Developer: Inspect Editor Tokens and Scopes</code>を有効化すると、カーソル位置の構文の<code>textMateScopes</code>を確認できる。  </li>
+<li><code>&quot;settings&quot;</code>の中に、変更したいスタイル(<code>&quot;fontStyle&quot;</code>や<code>&quot;foregroundColor&quot;</code>など)を指定していく。  </li>
+</ul>
+<h1 id="参考文献">参考文献</h1>
+<h2 id="vscodeについて">VSCodeについて</h2>
+<ul>
+<li>日経XTECH、「これさえあれば大丈夫、ソフト開発の大定番「VSCode」を極める」
+<a href="https://xtech.nikkei.com/atcl/nxt/column/18/01907/010500001/" target="_blank">https://xtech.nikkei.com/atcl/nxt/column/18/01907/010500001/</a></li>
+<li>Microsoft、「Visual Studio Code」<br><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/" target="_blank">https://azure.microsoft.com/ja-jp/products/visual-studio-code/</a></li>
+</ul>
+<h2 id="vscodeのインストール方法">VSCodeのインストール方法</h2>
+<ul>
+<li>Let&apos;sプログラミング、「Visual Studio Code」のダウンロードとインストール<br><a href="https://www.javadrive.jp/vscode/install/index1.html" target="_blank">https://www.javadrive.jp/vscode/install/index1.html</a></li>
+<li>Qiita、「Homebrewのインストール」<br><a href="https://qiita.com/zaburo/items/29fe23c1ceb6056109fd" target="_blank">https://qiita.com/zaburo/items/29fe23c1ceb6056109fd</a></li>
+<li>Qiita、「VSCodeのインストール方法をまとめてみた(MacOS)」<br><a href="https://qiita.com/DaikiSuyama/items/f51a407584084c04b5cd" target="_blank">https://qiita.com/DaikiSuyama/items/f51a407584084c04b5cd</a></li>
+</ul>
+<h2 id="vscodeの使いかた">VSCodeの使いかた</h2>
+<ul>
+<li>Microsoft、「Visual Studio Code User Interface」
+<a href="https://code.visualstudio.com/docs/getstarted/userinterface" target="_blank">https://code.visualstudio.com/docs/getstarted/userinterface</a></li>
+<li>Let&apos;sプログラミング、「Visual Studio Code」の使い方
+<a href="https://www.javadrive.jp/vscode/" target="_blank">https://www.javadrive.jp/vscode/</a></li>
+</ul>
+<h2 id="vscodeをカスタムする">VSCodeをカスタムする</h2>
+<ul>
+<li>Qiita、「【Windows版】VS Code キーボードショートカット一覧 （オススメ付き）」
+<a href="https://qiita.com/TakahiRoyte/items/cdab6fca64da386a690b" target="_blank">https://qiita.com/TakahiRoyte/items/cdab6fca64da386a690b</a></li>
+<li>ITメディア、「VS Codeで配色テーマをカスタマイズするには」<br><a href="https://atmarkit.itmedia.co.jp/ait/articles/1810/19/news032.html" target="_blank">https://atmarkit.itmedia.co.jp/ait/articles/1810/19/news032.html</a></li>
+<li>ITメディア、「Visual Studio Codeの設定「虎の巻」：構文ハイライト／配色テーマ自作編」
+<a href="https://atmarkit.itmedia.co.jp/ait/articles/1710/20/news023.html" target="_blank">https://atmarkit.itmedia.co.jp/ait/articles/1710/20/news023.html</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../md-tutorial/md1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Markdownのつかいかた">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"VSCodeのつかいかた","level":"3.2","depth":1,"previous":{"title":"Markdownのつかいかた","level":"3.1","depth":1,"path":"md-tutorial/md1.md","ref":"md-tutorial/md1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vscode-tutorial/md1.md","mtime":"2022-05-15T11:59:34.397Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-15T11:59:46.376Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
