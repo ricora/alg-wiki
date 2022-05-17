@@ -112,9 +112,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../git-tutorial.html">
+        <li class="chapter " data-level="2.1" data-path="./">
             
-                <a href="../git-tutorial.html">
+                <a href="./">
             
                     
                     Gitのつかいかた
@@ -177,9 +177,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../md-tutorial/md1.html">
+        <li class="chapter " data-level="3.1" data-path="../md-tutorial/">
             
-                <a href="../md-tutorial/md1.html">
+                <a href="../md-tutorial/">
             
                     
                     Markdownのつかいかた
@@ -190,12 +190,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../vscode-tutorial/md1.html">
+        <li class="chapter " data-level="3.2" data-path="../vscode-tutorial/">
             
-                <a href="../vscode-tutorial/md1.html">
+                <a href="../vscode-tutorial/">
             
                     
-                    VSCodeのつかいかた
+                    VS Codeのつかいかた
             
                 </a>
             
@@ -346,12 +346,12 @@ git commit -m <span class="hljs-string">&quot;initial commit&quot;</span>
 git add A.txt
 git commit -m <span class="hljs-string">&quot;wrote to A.txt&quot;</span>
 </code></pre>
-<p>と打ちます。  </p>
+<p>と打ちます。</p>
 <p>ここまで行った後で、二つのブランチ、mainとeditAでの<code>git log</code>の出力を比べてみましょう。</p>
 <p>mainでは</p>
 <pre><code class="lang-sh">commit ... (HEAD -&gt; main)
 </code></pre>
-<p>editAでは </p>
+<p>editAでは</p>
 <pre><code class="lang-sh">commit ...  (HEAD -&gt; editA)
 Author: ...
 Date: ...
@@ -389,7 +389,7 @@ commit <span class="hljs-string">&quot;initial commit&quot;</span>
 <pre><code class="lang-sh">                  -----&gt; commit <span class="hljs-string">&quot;wrote to A.txt&quot;</span>
                   |          ^
                   |          |
-                  |      ブランチ editA  
+                  |      ブランチ editA
                   |
 commit <span class="hljs-string">&quot;initial commit&quot;</span>
           ^
@@ -400,34 +400,36 @@ commit <span class="hljs-string">&quot;initial commit&quot;</span>
 <pre><code class="lang-sh">                  -----&gt; commit <span class="hljs-string">&quot;wrote to A.txt&quot;</span>
                   |          ^
                   |          |
-                  |      ブランチ editA  
+                  |      ブランチ editA
                   |
 commit <span class="hljs-string">&quot;initial commit&quot;</span> --&gt; commit <span class="hljs-string">&quot;create B.txt&quot;</span>
                                      ^
                                      |
                             ブランチ main &lt;= HEAD
 </code></pre>
-<p>すると、コミットの履歴が分岐するのです。それはさておき、これでおわかりでしょうか。HEADが指し示す先が移動することによって、私たちは<strong>見せかけの</strong>ブランチ移動をしているのです。<br>また、ブランチがなぜブランチと呼ばれるかも解ると思います。ブランチという名は、本流から切り離されてその一つの枝になることから来ているということです。</p>
+<p>すると、コミットの履歴が分岐するのです。それはさておき、これでおわかりでしょうか。HEADが指し示す先が移動することによって、私たちは<strong>見せかけの</strong>ブランチ移動をしているのです。
+また、ブランチがなぜブランチと呼ばれるかも解ると思います。ブランチという名は、本流から切り離されてその一つの枝になることから来ているということです。</p>
 <p>さて、ここからなぜブランチの切り替えでファイルがなくなるかを考えてみましょう。答えはシンプルで、HEADが移動することによって、ファイルがない状態のコミットが最近のコミットになるからです。</p>
 <p>では、これらのブランチを統合するようなこと、つまりmergeについて見ていきましょう。</p>
 <h2 id="git--github-の使い方---マージする">Git / GitHub の使い方 - マージする</h2>
 <p>ブランチの使いどころとしては、</p>
 <ul>
 <li>新規機能開発・機能追加</li>
-<li>バグ修正などのパッチ当て作業  </li>
+<li>バグ修正などのパッチ当て作業</li>
 </ul>
 <p>などが挙げられます。いずれもどこかのタイミングで開発の本流、例えばmainやmasterブランチにそのコミットを反映させる必要があるものです。</p>
-<p>そこで、ブランチにはマージという機能があります。mergeというのは混ぜる、という意味の英単語です。その名の通り、二つのブランチを合流させるためのものです。  </p>
+<p>そこで、ブランチにはマージという機能があります。mergeというのは混ぜる、という意味の英単語です。その名の通り、二つのブランチを合流させるためのものです。</p>
 <p>コマンドは簡単です。</p>
 <pre><code class="lang-sh">git merge (マージしたいブランチ名)
 </code></pre>
 <p>で終わります。</p>
 <p>しかし、マージが可能である場面とそうでない場面があります。その中で、よくある状況を少し考えてみましょう。</p>
-<p>A. Fast-Forwardが可能であるような状態  </p>
+<p>A. Fast-Forwardが可能であるような状態</p>
 <p>   マージするブランチがもう一つのブランチのHEADの先にコミットしている場合、マージするには他のブランチのコミットを単純に引っ張ってくればいいので簡単にマージできます。</p>
-<p>B. 直接マージできない状態  </p>
-<p>   マージするブランチともう一つのブランチのコミットログに差があり、単純にコミットログを融合できないようなことも考えられます。<br>   そのような場合は、git側でエラーを吐くこともあります。エラーログを読むと共に、コミットログを確認してブランチがスパゲッティ状態にならないようにしましょう。  </p>
-<p>　　詳しくは<code>man git-merge</code>もしくは<code>man 1 git-merge</code>とか<a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging" target="_blank">Branching and Merging - Git SCM Book</a>を読んでください。  </p>
+<p>B. 直接マージできない状態</p>
+<p>   マージするブランチともう一つのブランチのコミットログに差があり、単純にコミットログを融合できないようなことも考えられます。
+   そのような場合は、git側でエラーを吐くこともあります。エラーログを読むと共に、コミットログを確認してブランチがスパゲッティ状態にならないようにしましょう。</p>
+<p>　　詳しくは<code>man git-merge</code>もしくは<code>man 1 git-merge</code>とか<a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging" target="_blank">Branching and Merging - Git SCM Book</a>を読んでください。</p>
 <p>ただし、基本的にマージをするタイミングは多くないと思います。その際に調べていくような感じでいいと思います。</p>
 <p><strong>要追記</strong></p>
 <p>最後の<a href="git3.html">リモート・プロジェクトへの貢献編</a>を読み、ブランチを用いた開発手法を学びましょう。</p>
@@ -474,7 +476,7 @@ commit <span class="hljs-string">&quot;initial commit&quot;</span> --&gt; commit
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた branch, merge","level":"2.1.2","depth":2,"next":{"title":"Gitのつかいかた push, pull request","level":"2.1.3","depth":2,"path":"git-tutorial/git3.md","ref":"git-tutorial/git3.md","articles":[]},"previous":{"title":"Gitのつかいかた init, add, commit","level":"2.1.1","depth":2,"path":"git-tutorial/git1.md","ref":"git-tutorial/git1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git-tutorial/git2.md","mtime":"2022-05-17T06:16:38.193Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-17T06:16:49.808Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた branch, merge","level":"2.1.2","depth":2,"next":{"title":"Gitのつかいかた push, pull request","level":"2.1.3","depth":2,"path":"git-tutorial/git3.md","ref":"git-tutorial/git3.md","articles":[]},"previous":{"title":"Gitのつかいかた init, add, commit","level":"2.1.1","depth":2,"path":"git-tutorial/git1.md","ref":"git-tutorial/git1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git-tutorial/git2.md","mtime":"2022-05-17T06:19:10.729Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-17T06:19:24.557Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

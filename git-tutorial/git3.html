@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../md-tutorial/md1.html" />
+    <link rel="next" href="../md-tutorial/" />
     
     
     <link rel="prev" href="git2.html" />
@@ -112,9 +112,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../git-tutorial.html">
+        <li class="chapter " data-level="2.1" data-path="./">
             
-                <a href="../git-tutorial.html">
+                <a href="./">
             
                     
                     Gitのつかいかた
@@ -177,9 +177,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../md-tutorial/md1.html">
+        <li class="chapter " data-level="3.1" data-path="../md-tutorial/">
             
-                <a href="../md-tutorial/md1.html">
+                <a href="../md-tutorial/">
             
                     
                     Markdownのつかいかた
@@ -190,12 +190,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../vscode-tutorial/md1.html">
+        <li class="chapter " data-level="3.2" data-path="../vscode-tutorial/">
             
-                <a href="../vscode-tutorial/md1.html">
+                <a href="../vscode-tutorial/">
             
                     
-                    VSCodeのつかいかた
+                    VS Codeのつかいかた
             
                 </a>
             
@@ -258,11 +258,16 @@
 以下にいくつか頻出の単語を書きだしておきました。
 今後はこれらを用いて解説していきます。</p>
 <ul>
-<li><strong>リポジトリ</strong><br> <code>git</code>によって管理されているファイルシステムのこと。<code>commit</code>されたファイルが記録される。</li>
-<li><strong>リモート</strong><br> リモートリポジトリの略。外部サーバーなどにおいてあるレポジトリのこと。</li>
-<li><strong>ローカル</strong><br> ローカルリポジトリの略。手元にあるレポジトリのこと。もしくは、手元の環境のこと。</li>
-<li><strong>コミット</strong><br> <code>git commit</code>すること。意識高い系っぽい。<code>commit</code>でプロジェクトにコミットや。</li>
-<li><strong>プッシュ</strong><br> <code>git push</code>すること。つまり、リモートリポジトリに手元の変更を知らせること。詳しくは後述。</li>
+<li><strong>リポジトリ</strong>
+ <code>git</code>によって管理されているファイルシステムのこと。<code>commit</code>されたファイルが記録される。</li>
+<li><strong>リモート</strong>
+ リモートリポジトリの略。外部サーバーなどにおいてあるレポジトリのこと。</li>
+<li><strong>ローカル</strong>
+ ローカルリポジトリの略。手元にあるレポジトリのこと。もしくは、手元の環境のこと。</li>
+<li><strong>コミット</strong>
+ <code>git commit</code>すること。意識高い系っぽい。<code>commit</code>でプロジェクトにコミットや。</li>
+<li><strong>プッシュ</strong>
+ <code>git push</code>すること。つまり、リモートリポジトリに手元の変更を知らせること。詳しくは後述。</li>
 </ul>
 <hr>
 <h2 id="gitの使い方---リモートリポジトリとの通信・同期">Gitの使い方 - リモートリポジトリとの通信・同期</h2>
@@ -271,10 +276,12 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 <p>以下では、そのようなサーバーを提供するサービスの一つである<code>GitHub</code>を用いて説明をします。</p>
 <h3 id="githubでリモートリポジトリを作る">GitHubでリモートリポジトリを作る</h3>
 <ol>
-<li><p><code>GitHub</code>のユーザー登録<br><code>GitHub</code>のユーザー登録を済ませておきましょう。
+<li><p><code>GitHub</code>のユーザー登録
+<code>GitHub</code>のユーザー登録を済ませておきましょう。
 <a href="https://github.com/" target="_blank">GitHub</a>にアクセスし、ユーザー登録をします。</p>
 </li>
-<li><p>新しいリポジトリを作る<br>ユーザー登録が済んだら、Newとか新規、もしくは<a href="https://github.com/new" target="_blank">このリンク</a>を踏んで新しいリポジトリを作りましょう。
+<li><p>新しいリポジトリを作る
+ユーザー登録が済んだら、Newとか新規、もしくは<a href="https://github.com/new" target="_blank">このリンク</a>を踏んで新しいリポジトリを作りましょう。
 名前はなんでもいいです。public / private もどちらでもいいです。ただし、publicな状態であればそのあと上級生が助けやすくなるのではないかと推察されます。</p>
 </li>
 </ol>
@@ -286,12 +293,14 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 </blockquote>
 <h3 id="リモートリポジトリにプッシュしてみる">リモートリポジトリにプッシュしてみる</h3>
 <p><code>GitHub</code>側でリポジトリが生成できたので、ローカルリポジトリの状態をリモートに反映させましょう。</p>
-<p>まず、ローカルリポジトリ（<em>この語がわからなければ<a href="#git用語の定義">Git用語の定義</a>へ！</em>）にリモートリポジトリを登録しましょう。<br><code>GitHub</code>では左上の緑の<code>Clone</code>ボタンを押すとURLが表示されるので、</p>
+<p>まず、ローカルリポジトリ（<em>この語がわからなければ<a href="#git用語の定義">Git用語の定義</a>へ！</em>）にリモートリポジトリを登録しましょう。
+<code>GitHub</code>では左上の緑の<code>Clone</code>ボタンを押すとURLが表示されるので、</p>
 <pre><code class="lang-sh">git remote add origin (URL)
 </code></pre>
-<p>を入力します。  </p>
+<p>を入力します。</p>
 <p>この段階でリモートリポジトリが登録できました。</p>
-<p>では、リモートリポジトリにローカルの状態を反映させます。<br>初回は以下のコマンドを使います。</p>
+<p>では、リモートリポジトリにローカルの状態を反映させます。
+初回は以下のコマンドを使います。</p>
 <pre><code class="lang-sh">git push --set-upstream origin master
 </code></pre>
 <p>二回目以降は以下になります。</p>
@@ -324,7 +333,8 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 </code></pre>
 <p>です。</p>
 </li>
-<li><p>GitHubにアクセスする、<code>gh</code>コマンドを使うなどでプルリクエストを出す<br>どういうプルリクエストなのかを書けばいいです。どのような変更を行ったかがわかるように書くとレビューしやすくていいと思います。  </p>
+<li><p>GitHubにアクセスする、<code>gh</code>コマンドを使うなどでプルリクエストを出す
+どういうプルリクエストなのかを書けばいいです。どのような変更を行ったかがわかるように書くとレビューしやすくていいと思います。</p>
 </li>
 <li><p>レビュー時にコメントなどがついた場合は返答する。</p>
 </li>
@@ -332,11 +342,13 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 <p>(レビューする側)</p>
 <ol>
 <li><p>動作を確認する</p>
-<p>プルリクエストが出されているブランチをクローンして、動作を確認します。ファイルの差分も見るといいでしょう。<br>とても大切なのが、<strong>実際に実行されている状態を確認</strong>することです。このブログのようにグラフィックスが関係するようなものであれば、モバイル版の画面サイズなどでどのように表示されているかも確認できるといいと思います。</p>
+<p>プルリクエストが出されているブランチをクローンして、動作を確認します。ファイルの差分も見るといいでしょう。
+とても大切なのが、<strong>実際に実行されている状態を確認</strong>することです。このブログのようにグラフィックスが関係するようなものであれば、モバイル版の画面サイズなどでどのように表示されているかも確認できるといいと思います。</p>
 </li>
 <li><p>コメント・認可</p>
 <ul>
-<li><p>問題がない場合<br> プルリクエストが出されているブランチをmainにマージしてもいいなら、Approve(認可)ボタンを押します。その後マージするための画面が出てくるので、&quot;Commit &amp; Merge&quot;を選択してマージします。</p>
+<li><p>問題がない場合
+ プルリクエストが出されているブランチをmainにマージしてもいいなら、Approve(認可)ボタンを押します。その後マージするための画面が出てくるので、&quot;Commit &amp; Merge&quot;を選択してマージします。</p>
 </li>
 <li><p>問題があった場合
  プルリクエストにコメントを残しましょう。その後返信や追加のコミットがあった場合、レビューをまた行ったり、動作を確認したりするなどで対応しましょう。</p>
@@ -350,9 +362,11 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
 <p>複雑なプログラムを書く場合、プログラムをテストしましょう。プログラムの種類によりますが、意図しない挙動は意図しない使われ方の元です。バグを使った侵入手法もあります（例えば<a href="https://securitychecklist.net/security/cyber-attack/file-include-vulnerability.html" target="_blank">こういうの</a>とか)。人間がプログラムを読むだけで全てのバグに気づくのは不可能なので、テストを使って効果的にバグを検出していきましょう。</p>
 <p>実際のテスト手法には以下のようなものがあります。</p>
 <ul>
-<li><p>単体テスト<br>機能単体のテストを行う。</p>
+<li><p>単体テスト
+機能単体のテストを行う。</p>
 </li>
-<li><p>複合テスト<br>機能全体のテストを行う。WebだとSeleniumとかを使うのかな？</p>
+<li><p>複合テスト
+機能全体のテストを行う。WebだとSeleniumとかを使うのかな？</p>
 </li>
 </ul>
 <p>これらを自動化してくれるのが CI/CD (Circular Integration / Circular Delivery) というものです（正確にはCircular Integrationの部分)。例えば、このwikiがおいてあるブログでも<code>GitHub Actions</code>が走っていて、PRとかmergeの際にコンパイルなどが通らないとmergeできないようになっているはず。使いすぎると課金されたりするので気をつけましょう。</p>
@@ -396,7 +410,7 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
                 </a>
                 
                 
-                <a href="../md-tutorial/md1.html" class="navigation navigation-next " aria-label="Next page: Markdownのつかいかた">
+                <a href="../md-tutorial/" class="navigation navigation-next " aria-label="Next page: Markdownのつかいかた">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -407,7 +421,7 @@ SSDの破損・パソコンの物理的損害などによる完全なるファ�
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた push, pull request","level":"2.1.3","depth":2,"next":{"title":"Markdownのつかいかた","level":"3.1","depth":1,"path":"md-tutorial/md1.md","ref":"md-tutorial/md1.md","articles":[]},"previous":{"title":"Gitのつかいかた branch, merge","level":"2.1.2","depth":2,"path":"git-tutorial/git2.md","ref":"git-tutorial/git2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git-tutorial/git3.md","mtime":"2022-05-17T06:16:38.193Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-17T06:16:49.808Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitのつかいかた push, pull request","level":"2.1.3","depth":2,"next":{"title":"Markdownのつかいかた","level":"3.1","depth":1,"path":"md-tutorial/index.md","ref":"md-tutorial/index.md","articles":[]},"previous":{"title":"Gitのつかいかた branch, merge","level":"2.1.2","depth":2,"path":"git-tutorial/git2.md","ref":"git-tutorial/git2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git-tutorial/git3.md","mtime":"2022-05-17T06:19:10.729Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-17T06:19:24.557Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
