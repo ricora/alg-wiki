@@ -249,11 +249,11 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="markdown-の使い方について">Markdown の使い方について</h1>
-<p>この記事は <a href="http://www.markdown.jp/syntax/" target="_blank">日本語 markdown の会</a>、 <a href="https://qiita.com/Qiita/items/c686397e4a0f4f11683d" target="_blank">Qiita 株式会社</a> 、 <a href="https://trap.jp/post/371/" target="_blank">Titech traP </a>  を参考にした。より詳しいことが知りたいならばこちらを参考にしてほしい。</p>
+<p>この記事は <a href="http://www.markdown.jp/syntax/" target="_blank">日本語 markdown の会</a>、<a href="https://qiita.com/Qiita/items/c686397e4a0f4f11683d" target="_blank">Qiita 株式会社</a>、<a href="https://trap.jp/post/371/" target="_blank">Titech traP </a>  を参考にした。より詳しいことが知りたいならばリンク先を参考にしてほしい。</p>
 <h2 id="markdown-って？美味しいの？">Markdown って？美味しいの？</h2>
 <h3 id="markdown-の概要">Markdown の概要</h3>
 <p>Markdown は<a href="https://ja.wikipedia.org/wiki/%E8%BB%BD%E9%87%8F%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E" target="_blank">マークアップ言語</a>の 1 つであり、変換ツールを噛ますことにより、HTML や <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> などの別のマークアップ言語に変換をすることができる。</p>
-<p>また、Pandoc や Marp, SATySFi などを用いれば高品質な PDF を生成することも可能である。すなわち、ツール次第であらゆることが可能である。</p>
+<p>また、Pandoc や Marp, SATySFi などを用いれば高品質な PDF を生成することも可能である。ツールを使うと様々なことができる。 </p>
 <p>最近の技術系プラットフォームでは Markdown 記法をサポートしているものが多い。（GitHub, Discord, Qiita など）そのため、Markdown はプログラミングを学ぶ上では知っておいて損はない。</p>
 <h3 id="markdownのメリット">Markdownのメリット</h3>
 <ul>
@@ -262,17 +262,56 @@
 <li>数式や表などを入力できる。</li>
 </ul>
 <p>などが挙げられる。</p>
+<h2 id="補足--htmlについて">補足 : HTMLについて</h2>
+<ul>
+<li><p>HTMLはHyperText Markup Languageの頭文字をとったもの。</p>
+</li>
+<li><p>ウェブサイトの構造を記述する言語</p>
+</li>
+<li><p>でも書くのが結構面倒くさい</p>
+</li>
+</ul>
+<p>このスライド:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> 補足: HTMLについて <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> HTML... <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> ウェブサイトの... <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> でも書くのが... 面倒 <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<h2 id="補足--latexlatexlate​x-について">補足 : <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> について</h2>
+<ul>
+<li><p>組版ソフトウェア。組版は文字を組んでくれるってこと。</p>
+</li>
+<li><p>これも結構書くのが面倒くさい（個人的な意見ですが。。。）</p>
+</li>
+<li><p>でも式がきれいに書ける＋枯れているので技術的保証がある。</p>
+</li>
+</ul>
+<p>構文とかが気になる人は自分で見てみてね。</p>
+<p>参考サイト:<a href="https://texwiki.texjp.org/" target="_blank">TeX Wiki</a></p>
 <h1 id="markdown-の記述方法">Markdown の記述方法</h1>
 <p>以下、実際の表示を上に、記法を下に示している。</p>
 <h2 id="見出し">見出し</h2>
+<p>h1 と h2 は主に見出し</p>
+<p>h3とh4はレポートの中で節とかを記述するときに使う。</p>
+<p>h5とh6 はあんまり使わない気がする…</p>
 <h1 id="h1">h1</h1>
 <pre><code># h1
 </code></pre><h2 id="h2">h2</h2>
 <pre><code>## h2
 </code></pre><h3 id="h3">h3</h3>
 <pre><code>### h3
-</code></pre><h2 id="段落">段落</h2>
-<p>空の行で間を開けるか、または半角スペースを 2 つ開ければ良い。</p>
+</code></pre><h3 id="h4">h4</h3>
+<pre><code>#### h4
+</code></pre><h5 id="h5">h5</h5>
+<pre><code class="lang-md"><span class="hljs-section">##### h5</span>
+</code></pre>
+<h6 id="h6">h6</h6>
+<pre><code class="lang-md"><span class="hljs-section">###### h6</span>
+</code></pre>
+<h2 id="段落">段落</h2>
+<p>空の行を 1 段挿入する。もしくは半角スペースを文末に 2 つ挿入することでも改行できる。</p>
 <p>東京理科大学</p>
 <p>電子計算機<br>研究会</p>
 <pre><code>東京理科大学
@@ -280,6 +319,7 @@
 電子計算機__
 研究会
 </code></pre><h2 id="区切り線">区切り線</h2>
+<p>3 種類あるが、出力結果はすべて同じである。</p>
 <hr>
 <p>あああ</p>
 <hr>
@@ -293,7 +333,7 @@ ___
 ***
 あああ
 </code></pre><h2 id="箇条書き">箇条書き</h2>
-<p>半角ハイフン ( - )  + スペース</p>
+<p>半角ハイフン ( - )  + スペース + 内容</p>
 <ul>
 <li>RICORA</li>
 </ul>
@@ -308,7 +348,12 @@ ___
 </blockquote>
 <pre><code>&gt; Markdown（マークダウン）は、文書を記述するための軽量マークアップ言語のひとつである。本来はプレーンテキスト形式で手軽に書いた文書からHTMLを生成するために開発されたものである。
 &gt;  &gt; Wikipediaより
+</code></pre><h2 id="リンク">リンク</h2>
+<p>説明とリンクをそれぞれ角括弧、丸括弧で書く。</p>
+<p><a href="https://alg.tus-ricora.com/" target="_blank">RICORA アルゴリズム班</a></p>
+<pre><code>[RICORA アルゴリズム班](https://alg.tus-ricora.com/)
 </code></pre><h2 id="画像">画像</h2>
+<p>リンクの記述に感嘆符をつける。</p>
 <pre><code>![説明](URL)
 </code></pre><p><img src="https://avatars.githubusercontent.com/u/33452053" alt="RICORA"></p>
 <pre><code>![RICORA](https://avatars.githubusercontent.com/u/33452053)
@@ -317,12 +362,14 @@ ___
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo fence="true">(</mo><msubsup><mo>⋂</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msubsup><mo>⋃</mo><mrow><mi>j</mi><mo>=</mo><mi>i</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>A</mi><mi>j</mi></msub><mo fence="true">)</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋂</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋃</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mathnormal mtight">i</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.43581800000000004em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></p>
 <pre><code>{% math_inline %}\left(\bigcap_{i=1}^\infty\bigcup_{j=i}^\infty A_j\right)=0{% endmath_inline %}
 </code></pre><h2 id="表">表</h2>
+<p>1行目に列名、二行目に揃え方、三行目以降にデータを入力。</p>
 <table>
 <thead>
 <tr>
-<th>普通</th>
+<th>指定なし</th>
 <th style="text-align:center">中央揃え</th>
 <th style="text-align:right">右揃え</th>
+<th style="text-align:left">左揃え</th>
 </tr>
 </thead>
 <tbody>
@@ -330,12 +377,13 @@ ___
 <td>あ</td>
 <td style="text-align:center">い</td>
 <td style="text-align:right">う</td>
+<td style="text-align:left">え</td>
 </tr>
 </tbody>
 </table>
-<pre><code>|普通|中央揃え|右揃え|
-| - | :-: | -: |
-|あ|い|う|
+<pre><code>|指定なし|中央揃え|右揃え|左揃え|
+| - | :-: | -: | :- |
+|あ|い|う|え|
 </code></pre><h2 id="ソースコード">ソースコード</h2>
 <p>```で文字を囲うことによりコード記述になる。インテンドでも代用ができる。</p>
 <pre><code class="lang-C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
@@ -362,9 +410,6 @@ int main() {
 
 
 `print(&apos;Hello, world!&apos;)`
-</code></pre><h2 id="リンク">リンク</h2>
-<p><a href="https://alg.tus-ricora.com/" target="_blank">RICORA アルゴリズム班</a></p>
-<pre><code>[RICORA アルゴリズム班](https://alg.tus-ricora.com/)
 </code></pre>
                                 
                                 </section>
@@ -408,7 +453,7 @@ int main() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Markdownのつかいかた","level":"3.1","depth":1,"next":{"title":"VS Codeのつかいかた","level":"3.2","depth":1,"path":"vscode-tutorial/index.md","ref":"vscode-tutorial/index.md","articles":[]},"previous":{"title":"Gitのつかいかた push, pull request","level":"2.1.3","depth":2,"path":"git-tutorial/git3.md","ref":"git-tutorial/git3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"md-tutorial/index.md","mtime":"2022-05-17T06:19:10.729Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-17T06:19:24.557Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Markdownのつかいかた","level":"3.1","depth":1,"next":{"title":"VS Codeのつかいかた","level":"3.2","depth":1,"path":"vscode-tutorial/index.md","ref":"vscode-tutorial/index.md","articles":[]},"previous":{"title":"Gitのつかいかた push, pull request","level":"2.1.3","depth":2,"path":"git-tutorial/git3.md","ref":"git-tutorial/git3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"md-tutorial/index.md","mtime":"2022-05-18T08:40:47.888Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-18T08:41:02.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
