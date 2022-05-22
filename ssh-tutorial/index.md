@@ -28,17 +28,22 @@
  ```
 $ ssh-keygen -t ed25519
 ```
+
 そうすると
+
 ```
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/Users/user/.ssh/id_ed25519):
 ```
+
 どこに保存するか聞かれるので、特に指定ながければ `Enter` を押す。
 次に、
+
 ```
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 ```
+
 と新しいパスワードを入力するよう求められるので、適切なパスワードを設定し、 `Enter` を押し、先程設定したパスワードを入力し`Enter`を押す。
 そうするとホームディレクトリの直下に `.ssh` ができ、その中に `id_ed25519` と `id_ed25519.pub` の2つの鍵が生成されます。
 
