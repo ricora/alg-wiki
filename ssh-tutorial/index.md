@@ -22,8 +22,8 @@
 今回は RSA よりも鍵長が短く高速に処理ができる エドワーズ曲線デジタル署名アルゴリズムの {% raw %} {% endraw %}`ED25519`{% raw %} {% endraw %} を用いる。
 
 ### 公開鍵と秘密鍵を生成する
-1. Windows の場合は Git Bash を、Mac, GNU/Linux の場合は ターミナルを開く。
-2. 下記のコマンドをコマンドラインに入力する。
+#### 1. Windows の場合は Git Bash を、Mac, GNU/Linux の場合は ターミナルを開く。
+#### 2. 下記のコマンドをコマンドラインに入力する。
 
 ```shell
 $ ssh-keygen -t ed25519
@@ -54,11 +54,11 @@ https://github.com/settings/ssh
 
 ここで 先程作った 公開鍵を登録する。
 
-1. New SSH key をクリックする。
+#### 1. New SSH key をクリックする。
 
-![ssh-add-ssh-key](photo/ssh-add-ssh-key.png)
+![ssh-add-ssh-key](https://user-images.githubusercontent.com/48943030/169848834-523db78b-01fd-45b0-93ae-e1d3f0a033b2.png)
 
-2. 適当な Title を設定し、
+#### 2. 適当な Title を設定し、key のフォームに公開鍵をペーストする。
 
 Mac の場合は `pbcopy < ~/.ssh/id_ed25519.pub`
 
@@ -66,9 +66,9 @@ Windows の場合は `clip < ~/.ssh/id_ed25519.pub`
 
 で公開鍵をコピーし `Key` の入力フォームにペーストする。
 
-![ssh-key-paste](photo/ssh-key-paste.png)
+![ssh-key-paste](https://user-images.githubusercontent.com/48943030/169848928-0c4c2cfa-a831-49d0-a313-e4e7748d5dfd.png)
 
-3.  `ssh -T git@github.com` とコマンドラインに入力し、パスワードを入力して、接続できてるか確認する。
+#### 3.  `ssh -T git@github.com` とコマンドラインに入力し、パスワードを入力して、接続できてるか確認する。
 
 ```
 Hi "GitHub のユーザー名"! You've successfully authenticated, but GitHub does not provide shell access.
