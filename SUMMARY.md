@@ -13,3 +13,4 @@
 
 * [Markdownのつかいかた](md-tutorial/index.md)
 * [VS Codeのつかいかた](vscode-tutorial/index.md)
+* [SSHのつかいかた](ssh-tutorial/index.md)
