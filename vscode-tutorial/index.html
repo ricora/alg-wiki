@@ -473,35 +473,35 @@ Dracula Themeは様々なソフトウェアで開発されており、<a href="h
 また、細かい設定の値については、実際のThemeのソースコード(<a href="https://github.com/primer/github-vscode-theme" target="_blank">GitHub Theme</a>)や<a href="https://code.visualstudio.com/api/references/theme-color" target="_blank">公式ドキュメント</a>を参考にしてもらいたい。</p>
 <h4 id="themeをいじる">themeをいじる</h4>
 <p>具体的には、</p>
-<pre><code class="lang-jsonc">&quot;workbench.colorCustomizations&quot;: {
-  &quot;設定項目&quot;: &quot;値&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;workbench.colorCustomizations&quot;</span>: {
+  <span class="hljs-string">&quot;設定項目&quot;</span>: <span class="hljs-string">&quot;値&quot;</span>
 }
 </code></pre>
 <p>といった形で書いていく。</p>
 <p>また、特定のthemeでのみ適応させたい場合は、</p>
-<pre><code class="lang-jsonc">&quot;workbench.colorCustomizations&quot;: {
-  &quot;[テーマ名]&quot;: {
-    &quot;設定項目&quot;: &quot;値&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;workbench.colorCustomizations&quot;</span>: {
+  <span class="hljs-string">&quot;[テーマ名]&quot;</span>: {
+    <span class="hljs-string">&quot;設定項目&quot;</span>: <span class="hljs-string">&quot;値&quot;</span>
   }
 },
 </code></pre>
 <p>Ex. <code>Cummunity Material Theme Darker High Contrast</code>での<code>focusBorder</code>の色を赤にする。</p>
-<pre><code class="lang-jsonc">&quot;workbench.colorCustomizations&quot;: {
-  &quot;[Community Material Theme Darker High Contrast]&quot;: {
-    &quot;focusBorder&quot;: &quot;#ff0000&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;workbench.colorCustomizations&quot;</span>: {
+  <span class="hljs-string">&quot;[Community Material Theme Darker High Contrast]&quot;</span>: {
+    <span class="hljs-string">&quot;focusBorder&quot;</span>: <span class="hljs-string">&quot;#ff0000&quot;</span>
   }
 },
 </code></pre>
 <h4 id="syntax-highlightをいじる">syntax highlightをいじる</h4>
 <p>具体的には、</p>
-<pre><code class="lang-jsonc">&quot;editor.tokenColorCustomizations&quot;: {
-  &quot;comments&quot;: {
-    &quot;foreground&quot;: &quot;#008800&quot;,
-    &quot;fontStyle&quot;: &quot;underline&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;editor.tokenColorCustomizations&quot;</span>: {
+  <span class="hljs-string">&quot;comments&quot;</span>: {
+    <span class="hljs-string">&quot;foreground&quot;</span>: <span class="hljs-string">&quot;#008800&quot;</span>,
+    <span class="hljs-string">&quot;fontStyle&quot;</span>: <span class="hljs-string">&quot;underline&quot;</span>
   },
-  &quot;functions&quot;: {
-    &quot;foreground&quot;: &quot;#000088&quot;,
-    &quot;fontStyle&quot;: &quot;bold&quot;
+  <span class="hljs-string">&quot;functions&quot;</span>: {
+    <span class="hljs-string">&quot;foreground&quot;</span>: <span class="hljs-string">&quot;#000088&quot;</span>,
+    <span class="hljs-string">&quot;fontStyle&quot;</span>: <span class="hljs-string">&quot;bold&quot;</span>
   },
 </code></pre>
 <p>といった形で書いていく。
@@ -519,16 +519,16 @@ Dracula Themeは様々なソフトウェアで開発されており、<a href="h
 <p>そして、commentsやfunctionなど大まかなジャンル指定では対応できないもの対しては、<code>textMateRules</code>を用いて指定していく。</p>
 <h4 id="textmaterulesをいじる">textMateRulesをいじる</h4>
 <p>具体的には、以下のように書いていく。</p>
-<pre><code class="lang-jsonc">&quot;textMateRules&quot;: [
+<pre><code class="lang-json"><span class="hljs-string">&quot;textMateRules&quot;</span>: [
   {
-    &quot;scope&quot;: [
-      &quot;comment&quot;,
-      &quot;comment.block&quot;,
-      &quot;comment.block.documentation&quot;,
-      &quot;keyword.control&quot;,
-      &quot;storage.type&quot;
-    ],    &quot;settings&quot;: {
-      &quot;fontStyle&quot;: &quot;&quot;
+    <span class="hljs-string">&quot;scope&quot;</span>: [
+      <span class="hljs-string">&quot;comment&quot;</span>,
+      <span class="hljs-string">&quot;comment.block&quot;</span>,
+      <span class="hljs-string">&quot;comment.block.documentation&quot;</span>,
+      <span class="hljs-string">&quot;keyword.control&quot;</span>,
+      <span class="hljs-string">&quot;storage.type&quot;</span>
+    ],    <span class="hljs-string">&quot;settings&quot;</span>: {
+      <span class="hljs-string">&quot;fontStyle&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
     }
   }
 ],
@@ -609,7 +609,7 @@ Dracula Themeは様々なソフトウェアで開発されており、<a href="h
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VS Codeのつかいかた","level":"3.2","depth":1,"previous":{"title":"Markdownのつかいかた","level":"3.1","depth":1,"path":"md-tutorial/index.md","ref":"md-tutorial/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vscode-tutorial/index.md","mtime":"2022-05-18T08:40:47.888Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-18T08:41:02.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"VS Codeのつかいかた","level":"3.2","depth":1,"previous":{"title":"Markdownのつかいかた","level":"3.1","depth":1,"path":"md-tutorial/index.md","ref":"md-tutorial/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vscode-tutorial/index.md","mtime":"2022-05-24T07:28:54.157Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-24T07:29:06.203Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
