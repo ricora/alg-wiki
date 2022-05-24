@@ -242,7 +242,7 @@ VS Codeのthemeは、拡張機能と同様にインストール出来る。
 #### themeをいじる
 
 具体的には、
-```jsonc
+```json
 "workbench.colorCustomizations": {
   "設定項目": "値"
 }
@@ -250,7 +250,7 @@ VS Codeのthemeは、拡張機能と同様にインストール出来る。
 といった形で書いていく。
 
 また、特定のthemeでのみ適応させたい場合は、
-```jsonc
+```json
 "workbench.colorCustomizations": {
   "[テーマ名]": {
     "設定項目": "値"
@@ -259,7 +259,7 @@ VS Codeのthemeは、拡張機能と同様にインストール出来る。
 ```
 
 Ex. `Cummunity Material Theme Darker High Contrast`での`focusBorder`の色を赤にする。
-```jsonc
+```json
 "workbench.colorCustomizations": {
   "[Community Material Theme Darker High Contrast]": {
     "focusBorder": "#ff0000"
@@ -271,7 +271,7 @@ Ex. `Cummunity Material Theme Darker High Contrast`での`focusBorder`の色を�
 #### syntax highlightをいじる
 
 具体的には、
-```jsonc
+```json
 "editor.tokenColorCustomizations": {
   "comments": {
     "foreground": "#008800",
@@ -300,7 +300,7 @@ Ex. `Cummunity Material Theme Darker High Contrast`での`focusBorder`の色を�
 
 具体的には、以下のように書いていく。
 
-```jsonc
+```json
 "textMateRules": [
   {
     "scope": [
