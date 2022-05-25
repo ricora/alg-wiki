@@ -1,0 +1,530 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>環境構築をしよう · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../git-tutorial/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">環境構築</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    環境構築をしよう
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Gitのつかいかたシリーズ</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../git-tutorial/">
+            
+                <a href="../git-tutorial/">
+            
+                    
+                    Gitのつかいかた
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../git-tutorial/git1.html">
+            
+                <a href="../git-tutorial/git1.html">
+            
+                    
+                    Gitのつかいかた init, add, commit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../git-tutorial/git2.html">
+            
+                <a href="../git-tutorial/git2.html">
+            
+                    
+                    Gitのつかいかた branch, merge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../git-tutorial/git3.html">
+            
+                <a href="../git-tutorial/git3.html">
+            
+                    
+                    Gitのつかいかた push, pull request
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ツールの使い方とか</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../md-tutorial/">
+            
+                <a href="../md-tutorial/">
+            
+                    
+                    Markdownのつかいかた
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../vscode-tutorial/">
+            
+                <a href="../vscode-tutorial/">
+            
+                    
+                    VS Codeのつかいかた
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../ssh-tutorial/">
+            
+                <a href="../ssh-tutorial/">
+            
+                    
+                    SSHのつかいかた
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >環境構築をしよう</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="プログラムを書く環境を整える">プログラムを書く環境を整える</h1>
+<p>この記事にしたがってインストールなどをしていくことで、サークルの活動にプログラムを書けば参加できる環境構築ができるはずです。それでは、始めていきましょう。</p>
+<h2 id="a-プログラムを最低限書けるようにしよう">A. プログラムを最低限書けるようにしよう</h2>
+<h4 id="macosのみ-xcode-command-line-tools-cltを入れる">(macOSのみ) Xcode Command Line Tools (CLT)を入れる</h4>
+<ol>
+<li>Spotlightなどを使ってターミナル.appを起動しよう。このあとも使い続けるのでdockに入れてもいいかも</li>
+<li>ターミナルで<code>xcode-select --install</code>と打つ。結構時間がかかるので、じっくり待とう。</li>
+<li>エラー表示が出てなければ導入完了！</li>
+</ol>
+<h3 id="vs-codeをインストールする">VS Codeをインストールする</h3>
+<h4 id="windows">Windows</h4>
+<ol>
+<li><a href="https://www.javadrive.jp/vscode/install/index1.html" target="_blank">このページ</a>を読んでインストールする</li>
+<li>ショートカットから起動できることを確認しよう</li>
+</ol>
+<h4 id="mac">Mac</h4>
+<ol>
+<li>先にこの下のパッケージマネージャーの節にある<code>homebrew</code>を入れる</li>
+<li><code>brew install --cask visual-studio-code</code>を入力</li>
+<li>SpotlightでVS Codeを見つけて起動できればとりあえずOK</li>
+<li>VS Codeを起動し、Command + Shift + Pを押してから、<code>shell command</code>と入力。PATHに<code>code</code>をインストールを選択</li>
+<li>ターミナルでcodeと入力し、VS Codeが立ち上がることを確認</li>
+</ol>
+<hr>
+<h2 id="b-パッケージマネージャーでソフトを管理しよう">B. パッケージマネージャーでソフトを管理しよう</h2>
+<h4 id="windows---chocolateyを導入しよう">Windows - Chocolateyを導入しよう</h4>
+<ol>
+<li><a href="https://chocolatey.org/install#individual" target="_blank">このページ</a>にアクセス</li>
+<li>Powershellを管理者権限で起動する。サイトの<code>Install Chocolatey for Individual Use</code>の真ん中にあるコマンドを入力し、エンターキーを押す。</li>
+<li>管理者権限を持っていない場合、<a href="https://docs.chocolatey.org/en-us/choco/setup#non-administrative-install" target="_blank">このページ</a>に従おう。</li>
+<li><code>choco -?</code>でヘルプ画面が見えたらOK</li>
+</ol>
+<h4 id="mac---homebrewを導入しよう">Mac - homebrewを導入しよう</h4>
+<ol>
+<li><a href="https://brew.sh/" target="_blank">brew.sh</a>の<code>Install Homebrew</code>の下にあるスクリプトをコピーして、ターミナルに貼り付けて、エンターを押す</li>
+<li><code>brew --version</code>でバージョンが表示されたらOK</li>
+</ol>
+<h4 id="linux">Linux</h4>
+<p>割愛。<code>apt</code>なり<code>pacman</code>を使っているはずなので自分で調べてね</p>
+<h5 id="なぜパッケージマネージャーが必要なのか">なぜパッケージマネージャーが必要なのか</h5>
+<p>パッケージマネージャーの強みは、コマンド一つでソフトウェアをインストールして、使用可能な状態にもっていけることです。パッケージマネージャーがなければ、すべてのソフトウェアの依存関係をすべて調べて、必要そうなライブラリをかき集め、やっとソフトウェアが動くということになります。ストレスフルですね。パッケージマネージャーは、インストールだけでなく、削除や更新、ソフトウェアの検索もできるので、導入をおすすめしています。</p>
+<hr>
+<h2 id="c-gitをインストールしよう">C. gitをインストールしよう</h2>
+<h4 id="windows">Windows</h4>
+<ol>
+<li>Powershellを起動し、<code>choco install git -y</code>を打つ</li>
+<li><code>git -h</code>でヘルプ画面が出ることを確認できればOK</li>
+</ol>
+<h4 id="macos">macOS</h4>
+<p>もともと<code>xcode-select</code>に入っているので、<code>git -h</code>でヘルプ画面を確認できればOK。</p>
+<p>違うバージョンの<code>git</code>を使いたい人は<code>brew install git</code>で</p>
+<h4 id="linux">Linux</h4>
+<p>マネージャ(<code>apt</code>とか<code>pacman</code>)で入れる。問題が生じたらArch wikiかdebianのメーリスとか見る。できれば一次ソースを見るようにしたほうがいい。</p>
+<hr>
+<h2 id="d-pythonをインストールしよう">D. Pythonをインストールしよう</h2>
+<p>Pythonが使えると便利なことが多いので紹介しておく。</p>
+<h4 id="windows">Windows</h4>
+<p>詳しくは<a href="https://www.python.jp/install/windows/install.html" target="_blank">このページ</a>にあるよ。</p>
+<ol>
+<li><a href="https://pythonlinks.python.jp/en/index.html" target="_blank">ダウンロードリンク</a>から好きなバージョンのファイルをダウンロード。</li>
+<li>ダウンロードしたファイルを実行し、インストールウィザードに従う。一番最初に<code>Add Python 3.x to PATH</code>をクリックし、チェックマークがついていることを確認。</li>
+<li>終わったら、コマンドプロンプトで<code>python --version</code>を打って、バージョンが出ればOK</li>
+</ol>
+<h4 id="macos">macOS</h4>
+<ol>
+<li><code>brew install python3</code>をターミナルで打つ。</li>
+<li><code>python3 --version</code>と打ってバージョンが出ればOK</li>
+</ol>
+<h4 id="linux">Linux</h4>
+<p>略。ちなみに<code>gnome</code>は<code>apt remove python3</code>で破壊できる。</p>
+<hr>
+<h2 id="e-hugoをインストールしよう">E. hugoをインストールしよう</h2>
+<p><a href="https://gohugo.io/getting-started/installing/" target="_blank">hugoのgetting started</a>に従おう。以下では手順を簡単に記しておく。サークルのページで使っているのは<strong>Hugo-extended</strong>なので、インストール時にhugo-extendedをインストールするようにしよう。</p>
+<h4 id="windows">Windows</h4>
+<ol>
+<li><code>Chocolatey</code>を導入している環境なら<code>choco install hugo-extended -confirm</code>をPowershellなどに入力</li>
+<li><code>hugo -h</code>とかでヘルプ画面が出ればOK</li>
+</ol>
+<h4 id="mac">Mac</h4>
+<ol>
+<li>homebrewを使っているなら <code>brew install hugo</code><ul>
+<li>tarballがいいならtarballを拾ってきて<code>tar xvf</code>とかする</li>
+</ul>
+</li>
+<li><code>hugo -h</code>とかでヘルプ画面が出ればOK</li>
+</ol>
+<h4 id="linux">Linux</h4>
+<ul>
+<li><code>apt</code>でとってこれるバージョンが古いことが多い（debianのパッケージのリリースサイクルを考えたら当たり前）なので、<a href="https://github.com/gohugoio/hugo/releases" target="_blank">ここ</a>にあるバイナリを<code>/usr/local/bin</code>とか<code>/usr/bin/</code>とか<code>$HOME/.bin/</code>とかに配置する。debianとかなら<code>dpkg</code>でもよい</li>
+</ul>
+<h3 id="インストールが終わったら">インストールが終わったら</h3>
+<p>サークルのHPを手元で動かしてみよう。打つコマンドは以下の通り。</p>
+<ol>
+<li><code>git clone --recursive https://github.com/RICORA/alg-HP.git</code></li>
+<li><code>cd alg-HP</code></li>
+<li><code>hugo server</code></li>
+</ol>
+<p>3.まで終わったら<code>http://localhost:1313</code>にアクセスして、<a href="https://alg.tus-ricora.com" target="_blank">ここ</a>にあるようなサイトが表示されていれば成功！</p>
+<hr>
+<h2 id="f-nodejsをインストールしよう">F. node.jsをインストールしよう</h2>
+<h4 id="windows">Windows</h4>
+<ol>
+<li><a href="https://nodejs.org/ja/download/" target="_blank">node.jsのダウンロードページ</a>からWindows Installerを選んで、.pkgファイルをダウンロード</li>
+<li>ダウンロードしたインストーラーを開いて、ウィザードの指示に従ってインストールする</li>
+<li>Powershellかコマンドプロンプトを開いて、<code>node --help</code>と<code>npm help</code>の両方でヘルプ画面が出ればOK</li>
+</ol>
+<h4 id="mac">Mac</h4>
+<ol>
+<li><a href="https://nodejs.org/ja/download/" target="_blank">node.jsのダウンロードページ</a>からmacOS Installerを選んで、.pkgファイルをダウンロード</li>
+<li>ウィザードが開くので、ウィザードの指示にしたがってインストールする</li>
+<li>ターミナルを開いて<code>node --help</code>と<code>npm help</code>の両方でヘルプ画面が出ればOK</li>
+</ol>
+<h4 id="linux">Linux</h4>
+<ol>
+<li><code>nvm</code>を入れる。<a href="https://github.com/nvm-sh/nvm#installing-and-updating" target="_blank">ここ</a>にあるコマンドをコピペ。</li>
+<li><code>nvm install (version)</code>とか<code>nvm install latest</code>で<code>node.js</code>を入れる</li>
+<li><code>node --help</code>と<code>npm help</code>でヘルプ画面が出ればOK</li>
+</ol>
+<h3 id="インストールが終わったら">インストールが終わったら</h3>
+<p>サークルのwikiを手元で動かしてみよう！打つコマンドは以下の通り。</p>
+<ol>
+<li><code>git clone https://github.com/RICORA/alg-wiki.git</code></li>
+<li><code>cd alg-wiki</code></li>
+<li><code>npm i honkit katex</code></li>
+<li><code>npm run serve</code></li>
+</ol>
+<p>4.まで終わったら<code>http://localhost:4000</code>にアクセスして、<a href="https://alg-wiki.tus-ricora.com" target="_blank">ここ</a>にあるようなサイトが表示されていれば成功！</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: はじめに">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../git-tutorial/" class="navigation navigation-next " aria-label="Next page: Gitのつかいかた">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"環境構築をしよう","level":"2.1","depth":1,"next":{"title":"Gitのつかいかた","level":"3.1","depth":1,"path":"git-tutorial/index.md","ref":"git-tutorial/index.md","articles":[{"title":"Gitのつかいかた init, add, commit","level":"3.1.1","depth":2,"path":"git-tutorial/git1.md","ref":"git-tutorial/git1.md","articles":[]},{"title":"Gitのつかいかた branch, merge","level":"3.1.2","depth":2,"path":"git-tutorial/git2.md","ref":"git-tutorial/git2.md","articles":[]},{"title":"Gitのつかいかた push, pull request","level":"3.1.3","depth":2,"path":"git-tutorial/git3.md","ref":"git-tutorial/git3.md","articles":[]}]},"previous":{"title":"はじめに","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"environment-setup/index.md","mtime":"2022-05-25T07:51:37.959Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-25T07:51:49.860Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
