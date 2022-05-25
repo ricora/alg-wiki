@@ -20,7 +20,9 @@
 
 1. 先にこの下のパッケージマネージャーの節にある`homebrew`を入れる
 2. `brew install --cask visual-studio-code`を入力
-3. `code`と打って起動できることを確認
+3. SpotlightでVS Codeを見つけて起動できればとりあえずOK
+4. VS Codeを起動し、Command + Shift + Pを押してから、`shell command`と入力。PATHに`code`をインストールを選択
+5. ターミナルでcodeと入力し、VS Codeが立ち上がることを確認
 
 --- 
 
