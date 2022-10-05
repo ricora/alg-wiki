@@ -35,7 +35,7 @@
 
 ### Requirement
 
-[Node.js](https://nodejs.org/)が必要です。わからなければ[Node.jsの環境構築をする]()を参照してください。
+[Node.js](https://nodejs.org/)が必要です。わからなければ[Node.jsの環境構築をする](environment-setup/#f-nodejsをインストールしよう) を参照してください。
 
 ### Installation
 
