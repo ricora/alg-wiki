@@ -125,7 +125,7 @@ Pythonが使えると便利なことが多いので紹介しておく。
 
 #### Windows
 
-1. [node.jsのダウンロードページ](https://nodejs.org/ja/download/)からWindows Installerを選んで、.pkgファイルをダウンロード
+1. [node.jsのダウンロードページ](https://nodejs.org/ja/download/)からWindows Installerを選んで、.msiファイルをダウンロード
 2. ダウンロードしたインストーラーを開いて、ウィザードの指示に従ってインストールする
 3. Powershellかコマンドプロンプトを開いて、`node --help`と`npm help`の両方でヘルプ画面が出ればOK
 
