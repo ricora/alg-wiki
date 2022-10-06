@@ -1,3 +1,4 @@
 {
+  "title": "alg-wiki",
   "plugins": ["katex"]
 }
