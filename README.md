@@ -7,24 +7,6 @@
 
 このWikiは[RICORA Programming Team](https://alg.tus-ricora.com)での知見を集積するためのものです。
 
-## Contents
-
-### いまあるもの
-
-- [Git / GitHubのつかいかた](git-tutorial/)
-- [Markdownのつかいかた](md-tutorial/)
-- [VS Codeのつかいかた](vscode-tutorial/)
-
-### 書かれるであろうもの
-
-- [Hugoのつかいかた / alg-HPにPRを出してみよう]()
-- [Marpのつかいかた]()
-- [Pandocのつかいかた]()
-- [Gnuplotのつかいかた]()
-
-
-
-
 ## Contribution
 
 ページの生成には[Honkit](https://github.com/honkit/honkit)を使っています。詳しくは[Honkitのドキュメント](https://honkit.netlify.app/)を読んで編集してください。
