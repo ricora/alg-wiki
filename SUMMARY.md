@@ -15,7 +15,6 @@
 
 ### ツールの使い方とか
 
-* [Markdownのつかいかた](md-tutorial/index.md)
-* [VS Codeのつかいかた](vscode-tutorial/index.md)
-* [SSHのつかいかた](ssh-tutorial/index.md)
-
+* [Markdown](md-tutorial/index.md)
+* [VS Code](vscode-tutorial/index.md)
+* [SSH](ssh-tutorial/index.md)
